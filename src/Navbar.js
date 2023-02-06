@@ -9,7 +9,7 @@ const navigation = [
   //   { name: 'Figma', href: '#' },
 ];
 
-export default function Navbar() {
+const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -77,4 +77,6 @@ export default function Navbar() {
       </div>
     </div>
   );
-}
+};
+
+export default Navbar;
