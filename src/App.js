@@ -8,7 +8,7 @@ import Container from './Layout/Container';
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Hero />
       <Container>
         <Skills />
