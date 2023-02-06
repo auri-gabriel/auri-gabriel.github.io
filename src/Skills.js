@@ -30,12 +30,6 @@ const skills = [
     icon: '🐳',
   },
   {
-    name: 'Self-Hosting',
-    description:
-      'The act of hosting software and services on personal servers instead of relying on third-party providers.',
-    icon: '🏠',
-  },
-  {
     name: 'Web Assembly',
     description:
       'A low-level, high-performance binary format that can be executed in modern web browsers and runtimes, offering near-native performance.',
@@ -58,6 +52,24 @@ const skills = [
     description:
       'A high-level programming language used for a wide range of tasks such as web development, data analysis, artificial intelligence, and more.',
     icon: '🐍',
+  },
+  {
+    name: 'Spring Boot',
+    description:
+      'A popular Java-based framework for building scalable and high-performing microservices and web applications.',
+    icon: '🌱',
+  },
+  {
+    name: 'React.js',
+    description:
+      'A JavaScript library for building user interfaces using a component-based approach.',
+    icon: '💻',
+  },
+  {
+    name: 'Next.js',
+    description:
+      'A React-based framework for building server-side rendered and statically exported web applications.',
+    icon: '🚀',
   },
 ];
 
