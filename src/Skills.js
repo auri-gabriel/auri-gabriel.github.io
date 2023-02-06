@@ -30,12 +30,6 @@ const skills = [
     icon: '🐳',
   },
   {
-    name: 'Self-Hosting',
-    description:
-      'The act of hosting software and services on personal servers instead of relying on third-party providers.',
-    icon: '🏠',
-  },
-  {
     name: 'Web Assembly',
     description:
       'A low-level, high-performance binary format that can be executed in modern web browsers and runtimes, offering near-native performance.',
@@ -59,45 +53,74 @@ const skills = [
       'A high-level programming language used for a wide range of tasks such as web development, data analysis, artificial intelligence, and more.',
     icon: '🐍',
   },
+  {
+    name: 'Spring Boot',
+    description:
+      'A popular Java-based framework for building scalable and high-performing microservices and web applications.',
+    icon: '🌱',
+  },
+  {
+    name: 'React.js',
+    description:
+      'A JavaScript library for building user interfaces using a component-based approach.',
+    icon: '💻',
+  },
+  {
+    name: 'Next.js',
+    description:
+      'A React-based framework for building server-side rendered and statically exported web applications.',
+    icon: '🚀',
+  },
 ];
 
-export default function Skills() {
+const Skills = () => {
   return (
-    <div className='bg-white py-24 sm:py-32'>
-      <div className='mx-auto max-w-7xl px-6 lg:px-8'>
-        <div className='mx-auto max-w-2xl lg:text-center'>
-          <p className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-            The technologies I use
-          </p>
-          {/* <p className='mt-6 text-lg leading-8 text-gray-600'>
+    <>
+      <div className='mx-auto max-w-2xl lg:text-center'>
+        <p className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+          The technologies I use
+        </p>
+        {/* <p className='mt-6 text-lg leading-8 text-gray-600'>
             Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
             Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
             In mi viverra elit nunc.
           </p> */}
-        </div>
-        <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
-          <dl className='grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
-            {skills.map((skill) => (
-              <div key={skill.name} className='relative pl-16'>
-                <dt className='text-base font-semibold leading-7 text-gray-900'>
-                  <div className='absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-lg white '>
-                    <dd
-                      className='h-6 w-6 text-white text-2xl'
-                      aria-hidden='true'
-                    >
-                      {skill.icon}
-                    </dd>
-                  </div>
-                  {skill.name}
-                </dt>
-                <dd className='mt-2 text-base leading-7 text-gray-600'>
-                  {skill.description}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
       </div>
-    </div>
+      <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
+        <dl className='grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
+          {skills.map((skill) => skillCard(skill))}
+        </dl>
+      </div>
+    </>
   );
-}
+
+  function skillCard(skill) {
+    return (
+      <div key={skill.name} className='relative pl-16'>
+        <dt className='text-base font-semibold leading-7 text-gray-900'>
+          <div
+            className='absolute 
+          top-0
+          left-0
+          flex
+          h-10
+          w-10
+          items-center
+          justify-center
+          rounded-lg'
+          >
+            <div className='h-6 w-6 text-2xl' aria-hidden='true'>
+              {skill.icon}
+            </div>
+          </div>
+          {skill.name}
+        </dt>
+        <dd className='mt-2 text-base leading-7 text-gray-600'>
+          {skill.description}
+        </dd>
+      </div>
+    );
+  }
+};
+
+export default Skills;
