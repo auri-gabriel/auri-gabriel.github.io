@@ -1,11 +1,8 @@
 import React from 'react';
+import Hero from './Hero';
 
 const App = () => {
-  return (
-    <div className='flex flex-col items-center h-screen bg-gray-900'>
-      <h1 className='text-6xl text-white font-bold'>Hello World!</h1>
-    </div>
-  );
+  return <Hero />;
 };
 
 export default App;
