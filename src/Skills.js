@@ -107,12 +107,11 @@ const Skills = () => {
           w-10
           items-center
           justify-center
-          rounded-lg
-          white '
+          rounded-lg'
           >
-            <dd className='h-6 w-6 text-white text-2xl' aria-hidden='true'>
+            <div className='h-6 w-6 text-2xl' aria-hidden='true'>
               {skill.icon}
-            </dd>
+            </div>
           </div>
           {skill.name}
         </dt>
