@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='p-4 bg-white sm:p-6 '>
+    <footer className='p-4 bg-white sm:p-6'>
       <hr className='my-6 border-gray-200 sm:mx-auto  lg:my-8' />
       <div className='sm:flex sm:items-center sm:justify-between'>
-        <span className='text-sm text-gray-500 sm:text-center '>
+        <span className='text-sm text-gray-500 sm:text-center'>
           © {new Date().getFullYear()}{' '}
           <a href='https://auri-gabriel.github.io/' className='hover:underline'>
             Auri Gabriel
@@ -15,7 +15,7 @@ const Footer = () => {
         <div className='flex mt-4 space-x-6 sm:justify-center sm:mt-0'>
           <a
             href='https://facebook.com/auri.gabriel'
-            className='text-gray-500 hover:text-gray-900 '
+            className='text-gray-500 hover:text-gray-900'
           >
             <svg
               className='w-5 h-5'
@@ -33,7 +33,7 @@ const Footer = () => {
           </a>
           <a
             href='https://instagram.com/auri_gabriel'
-            className='text-gray-500 hover:text-gray-900 '
+            className='text-gray-500 hover:text-gray-900'
           >
             <svg
               className='w-5 h-5'
@@ -51,7 +51,7 @@ const Footer = () => {
           </a>
           <a
             href='https://twitter.com/auri_gabriel'
-            className='text-gray-500 hover:text-gray-900 '
+            className='text-gray-500 hover:text-gray-900'
           >
             <svg
               className='w-5 h-5'
@@ -65,7 +65,7 @@ const Footer = () => {
           </a>
           <a
             href='https://github.com/auri-gabriel'
-            className='text-gray-500 hover:text-gray-900 '
+            className='text-gray-500 hover:text-gray-900'
           >
             <svg
               className='w-5 h-5'
@@ -82,9 +82,9 @@ const Footer = () => {
             <span className='sr-only'>GitHub account</span>
           </a>
           <a
-            className='text-gray-500 hover:text-gray-900 '
             rel='me'
             href='https://mastodon.social/@auri_gabriel'
+            className='text-gray-500 hover:text-gray-900'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
