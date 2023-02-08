@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Hero = () => (
-  <main>
+  <section id='hero'>
     <div className='text-center lg:p-48 p-16'>
       <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
         Hi there, I'm Auri Gabriel!
@@ -29,7 +29,7 @@ const Hero = () => (
         </svg>
       </div>
     </div>
-  </main>
+  </section>
 );
 
 export default Hero;

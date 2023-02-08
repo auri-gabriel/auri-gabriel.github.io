@@ -6,13 +6,13 @@ import Container from './Layout/Container';
 
 const App = () => {
   return (
-    <>
-      <Hero />
-      <Container>
+    <Container>
+      <main>
+        <Hero />
         <Skills />
-        <Footer />
-      </Container>
-    </>
+      </main>
+      <Footer />
+    </Container>
   );
 };
 
