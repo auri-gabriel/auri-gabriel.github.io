@@ -4,8 +4,6 @@ const Hero = () => (
   <section
     id='hero'
     className='
-    max-w-[800px] 
-    mt-[-96px]
     w-full
     h-screen
     mx-auto
