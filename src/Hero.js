@@ -1,8 +1,18 @@
 import React from 'react';
 
 const Hero = () => (
-  <section id='hero'>
-    <div className='text-center lg:p-48 p-16'>
+  <section
+    id='hero'
+    className='
+    w-full
+    h-screen
+    mx-auto
+    text-center
+    flex
+    flex-col
+    justify-between'
+  >
+    <div className='flex-grow flex flex-col justify-center'>
       <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
         Hi there, I'm Auri Gabriel!
       </h1>
@@ -11,7 +21,7 @@ const Hero = () => (
         I'm a software engineering student
       </p>
     </div>
-    <div className='lg:py-14 invisible lg:visible'>
+    <div className='pb-36 flex-none'>
       <div className='flex items-center justify-center'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
