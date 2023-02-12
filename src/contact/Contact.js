@@ -12,9 +12,12 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+  const [errors, setErrors] = useState([]);
 
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
+    setError(false);
+    setSuccess(false);
   };
 
   const handleFormSubmit = (event) => {
@@ -31,16 +34,17 @@ const Contact = () => {
       .then((data) => {
         if (data.error) {
           setError(true);
-          console.log(data.error);
+          setErrors(data.errors);
         }
         if (data.ok) {
           setSuccess(true);
-          console.log(data);
+          setFormData({ name: '', email: '', message: '' });
+          setErrors([]);
         }
       })
       .catch((err) => {
         setError(true);
-        console.error(err);
+        setErrors(err);
       })
       .finally(() => {
         setIsLoading(false);
@@ -100,6 +104,7 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleInputChange}
                   className='w-full border border-gray-400 p-2'
+                  errors={errors}
                 />
               </div>
               <div className='mb-4'>
@@ -111,6 +116,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className='w-full border border-gray-400 p-2'
+                  errors={errors}
                 />
               </div>
               <div className='mb-4'>

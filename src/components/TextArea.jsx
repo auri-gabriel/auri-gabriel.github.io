@@ -3,7 +3,7 @@ import React from 'react';
 const TextArea = (props) => {
   return (
     <>
-      <label htmlFor={props.name} className='block font-bold mb-2'>
+      <label htmlFor={props.name} className='block font-bold mb-2 text-left'>
         {props.labelText}
       </label>
       <textarea
