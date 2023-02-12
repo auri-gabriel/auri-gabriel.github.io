@@ -12,7 +12,7 @@ const TextField = (props) => {
   }
   return (
     <>
-      <label htmlFor={props.name} className={`block font-bold mb-2 text-left `}>
+      <label htmlFor={props.name} className={`block font-bold mb-2 text-left`}>
         {props.labelText}
       </label>
       <input
