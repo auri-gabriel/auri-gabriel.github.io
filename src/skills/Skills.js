@@ -1,13 +1,35 @@
 import React, { useState } from 'react';
 import Button from '../components/Button';
+import Pill from '../components/Pill';
 import skillsJson from './skills.en.json';
 
 const Skills = () => {
   const skills = skillsJson['skills'];
+
+  const uniqueCategories = Array.from(
+    new Set(skills.map((skill) => skill.category))
+  );
+
   const [showAll, setShowAll] = useState(false);
+  const [selectedCategories, setSelectedCategories] =
+    useState(uniqueCategories);
 
   const handleShowAll = () => {
     setShowAll(!showAll);
+  };
+
+  const toggleCategory = (category) => {
+    setSelectedCategories((prevSelectedCategories) => {
+      if (prevSelectedCategories.includes(category)) {
+        if (prevSelectedCategories.length === 1) {
+          return prevSelectedCategories;
+        } else {
+          return prevSelectedCategories.filter((c) => c !== category);
+        }
+      } else {
+        return [...prevSelectedCategories, category];
+      }
+    });
   };
 
   return (
@@ -30,13 +52,25 @@ const Skills = () => {
             In mi viverra elit nunc.
           </p> */}
       </div>
-      <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
-        <dl className='grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 pb-4'>
+      <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-12 lg:max-w-4xl'>
+        <div className='flex flex-wrap my-6'>
+          {uniqueCategories.map((category) => (
+            <Pill
+              key={category}
+              active={selectedCategories.includes(category)}
+              onClick={() => toggleCategory(category)}
+              text={category}
+            />
+          ))}
+        </div>
+        <dl className='my-12 grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 pb-4'>
           {skills
+            .filter((skill) => selectedCategories.includes(skill.category))
             .slice(0, showAll ? skills.length : 6)
             .map((skill) => skillCard(skill))}
         </dl>
-        {skills.length > 6 && (
+        {skills.filter((skill) => selectedCategories.includes(skill.category))
+          .length > 6 && (
           <div className='flex justify-center'>
             <Button
               className='text-gray-700'
