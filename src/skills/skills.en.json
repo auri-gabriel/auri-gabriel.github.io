@@ -1,0 +1,64 @@
+{
+    "skills": [
+        {
+            "name": "Rust Programming Language",
+            "description": "A systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.",
+            "icon": "🦀"
+        },
+        {
+            "name": "Linux",
+            "description": "An open-source operating system that is widely used for servers, desktops, and IoT devices.",
+            "icon": "🐧"
+        },
+        {
+            "name": "Machine Learning",
+            "description": "A field of artificial intelligence that focuses on the development of algorithms that can learn patterns from data.",
+            "icon": "🧠"
+        },
+        {
+            "name": "JavaScript",
+            "description": "A high-level, dynamic, and interpreted programming language used primarily for creating interactive web pages and web applications.",
+            "icon": "💻"
+        },
+        {
+            "name": "Docker",
+            "description": "A platform for developers and sysadmins to develop, deploy, and run applications with containers.",
+            "icon": "🐳"
+        },
+        {
+            "name": "Web Assembly",
+            "description": "A low-level, high-performance binary format that can be executed in modern web browsers and runtimes, offering near-native performance.",
+            "icon": "🕸️"
+        },
+        {
+            "name": "Bash Scripting",
+            "description": "The act of writing scripts using the Bash shell language, which is commonly used in Linux and Unix systems for automating tasks and performing command-line operations.",
+            "icon": "🐚"
+        },
+        {
+            "name": "Java",
+            "description": "A high-level, object-oriented programming language used for building scalable and secure applications, especially in the enterprise environment.",
+            "icon": "☕"
+        },
+        {
+            "name": "Python",
+            "description": "A high-level programming language used for a wide range of tasks such as web development, data analysis, artificial intelligence, and more.",
+            "icon": "🐍"
+        },
+        {
+            "name": "Spring Boot",
+            "description": "A popular Java-based framework for building scalable and high-performing microservices and web applications.",
+            "icon": "🌱"
+        },
+        {
+            "name": "React.js",
+            "description": "A JavaScript library for building user interfaces using a component-based approach.",
+            "icon": "💻"
+        },
+        {
+            "name": "Next.js",
+            "description": "A React-based framework for building server-side rendered and statically exported web applications.",
+            "icon": "🚀"
+        }
+    ]
+}
