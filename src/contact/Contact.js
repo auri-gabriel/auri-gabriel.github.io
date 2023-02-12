@@ -61,39 +61,40 @@ const Contact = () => {
     text-center
     flex
     flex-col
-    justify-between'
+    justify-between
+    pt-16
+    '
     >
       <div className='container mx-auto'>
-        <h2 className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4'>
+        <h2 className='mt-2 text-3xl font-bold tracking-tight sm:text-4xl mb-4 mx-auto max-w-2xl lg:text-center'>
           Get in Touch
         </h2>
-        <div className='flex lg:flex-row'>
-          <div className='lg:w-1/2 px-6'>
-            <div className='p-6 bg-white shadow-md'>
-              <h3 className='text-lg font-medium mb-4'>Social Links</h3>
-              <p className='mb-2'>
-                <a
-                  href='#'
-                  className='inline-block mr-4 text-gray-600 hover:text-gray-800'
-                >
-                  Facebook
-                </a>
-                <a
-                  href='#'
-                  className='inline-block mr-4 text-gray-600 hover:text-gray-800'
-                >
-                  Twitter
-                </a>
-                <a
-                  href='#'
-                  className='inline-block text-gray-600 hover:text-gray-800'
-                >
-                  LinkedIn
-                </a>
-              </p>
-            </div>
+        <div className='flex flex-col lg:flex-row'>
+          <div className='p-6 flex-grow bg-white'>
+            <h3 className='text-lg font-medium mb-4'>Social Links</h3>
+            <p className='mb-2'>
+              <a
+                href='#'
+                className='inline-block mr-4 text-gray-600 hover:text-gray-800'
+              >
+                Facebook
+              </a>
+              <a
+                href='#'
+                className='inline-block mr-4 text-gray-600 hover:text-gray-800'
+              >
+                Twitter
+              </a>
+              <a
+                href='#'
+                className='inline-block text-gray-600 hover:text-gray-800'
+              >
+                LinkedIn
+              </a>
+            </p>
           </div>
-          <div className='lg:w-1/2 px-6'>
+          <div className='p-6 flex-grow bg-white'>
+            <h3 className='text-lg font-medium mb-4'>Social Links</h3>
             <form onSubmit={handleFormSubmit}>
               <div className='mb-4'>
                 <TextField
