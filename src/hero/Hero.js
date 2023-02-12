@@ -43,7 +43,7 @@ const Hero = () => {
       </div>
       <div className='pb-36 flex-none'>
         <div className='flex items-center justify-center text-gray-500'>
-          <a onClick={handleButtonClick} className='cursor-pointer'>
+          <a onClick={handleButtonClick} className='cursor-pointer' href='/#skills'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
