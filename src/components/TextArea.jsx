@@ -11,7 +11,7 @@ const TextArea = (props) => {
         id={props.id}
         value={props.value}
         onChange={props.onChange}
-        className='w-full border border-gray-900 p-2 rounded'
+        className='w-full border border-gray-300 p-2 rounded'
       />
     </>
   );
