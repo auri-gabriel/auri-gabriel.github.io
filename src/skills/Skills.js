@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Button from './components/Button';
-import skillsJson from './skills/skills.en.json';
+import Button from '../components/Button';
+import skillsJson from './skills.en.json';
 
 const Skills = () => {
   const skills = skillsJson['skills'];
@@ -17,6 +17,7 @@ const Skills = () => {
         w-full
         min-h-screen
         mx-auto
+        pt-16
         '
     >
       <div className='mx-auto max-w-2xl lg:text-center'>
@@ -30,7 +31,7 @@ const Skills = () => {
           </p> */}
       </div>
       <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
-        <dl className='grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16'>
+        <dl className='grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 pb-4'>
           {skills
             .slice(0, showAll ? skills.length : 6)
             .map((skill) => skillCard(skill))}
@@ -38,6 +39,7 @@ const Skills = () => {
         {skills.length > 6 && (
           <div className='flex justify-center'>
             <Button
+              className='text-gray-700'
               onClick={handleShowAll}
               text={showAll ? 'Show Less' : 'Show More'}
             />
