@@ -3,6 +3,7 @@ import Hero from './hero/Hero';
 import Skills from './skills/Skills';
 import Footer from './footer/Footer';
 import Container from './layout/Container';
+import Contact from './contact/Contact';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <main>
         <Hero />
         <Skills />
+        <Contact />
       </main>
       <Footer />
     </Container>
