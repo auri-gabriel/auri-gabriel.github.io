@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Hero = () => {
+  // eslint-disable-next-line
   const [hash, setHash] = useState('');
 
   useEffect(() => {
