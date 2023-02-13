@@ -22,6 +22,31 @@ const Contact = () => {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     setIsLoading(true);
+    setErrors([]);
+
+    const newErrors = [];
+
+    if (!formData.email) {
+      newErrors.push({ field: 'email', message: 'Email is required' });
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)
+    ) {
+      newErrors.push({ field: 'email', message: 'Email is invalid' });
+    }
+
+    if (!formData.name) {
+      newErrors.push({ field: 'name', message: 'Name is required' });
+    }
+
+    if (!formData.message) {
+      newErrors.push({ field: 'message', message: 'Message is required' });
+    }
+
+    if (newErrors.length > 0) {
+      setErrors(newErrors);
+      setIsLoading(false);
+      return;
+    }
 
     fetch('https://formspree.io/f/mjvdypgl', {
       method: 'POST',
@@ -92,8 +117,8 @@ const Contact = () => {
             </p>
           </div>
           <div className='p-6 flex-grow bg-white'>
-            <h3 className='text-lg font-medium mb-4'>Social Links</h3>
-            <form onSubmit={handleFormSubmit}>
+            <h3 className='text-lg font-medium mb-4'>Send me a message</h3>
+            <form onSubmit={handleFormSubmit} noValidate>
               <div className='mb-4'>
                 <TextField
                   labelText='Name'
