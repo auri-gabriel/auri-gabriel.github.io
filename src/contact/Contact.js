@@ -11,18 +11,18 @@ const Contact = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
   const [errors, setErrors] = useState([]);
 
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
-    setError(false);
+    setErrors(errors.filter((error) => error.field !== event.target.name));
     setSuccess(false);
   };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
     setIsLoading(true);
+
     fetch('https://formspree.io/f/mjvdypgl', {
       method: 'POST',
       headers: {
@@ -33,7 +33,6 @@ const Contact = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
-          setError(true);
           setErrors(data.errors);
         }
         if (data.ok) {
@@ -43,7 +42,6 @@ const Contact = () => {
         }
       })
       .catch((err) => {
-        setError(true);
         setErrors(err);
       })
       .finally(() => {
@@ -128,13 +126,14 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   className='w-full border border-gray-400 p-2'
+                  errors={errors}
                 />
               </div>
               <div className='text-center'>
                 <SubmitButton
                   isLoading={isLoading}
                   success={success}
-                  error={error}
+                  error={errors.length > 0}
                 />
               </div>
             </form>
