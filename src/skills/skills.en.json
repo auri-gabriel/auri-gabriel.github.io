@@ -1,76 +1,118 @@
 {
-    "skills": [
-        {
-            "name": "Rust Programming Language",
-            "description": "A systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.",
-            "icon": "🦀",
-            "category": "Programming Language"
-        },
-        {
-            "name": "Linux",
-            "description": "An open-source operating system that is widely used for servers, desktops, and IoT devices.",
-            "icon": "🐧",
-            "category": "Operating System"
-        },
-        {
-            "name": "Machine Learning",
-            "description": "A field of artificial intelligence that focuses on the development of algorithms that can learn patterns from data.",
-            "icon": "🧠",
-            "category": "Artificial Intelligence"
-        },
-        {
-            "name": "JavaScript",
-            "description": "A high-level, dynamic, and interpreted programming language used primarily for creating interactive web pages and web applications.",
-            "icon": "💻",
-            "category": "Programming Language"
-        },
-        {
-            "name": "Docker",
-            "description": "A platform for developers and sysadmins to develop, deploy, and run applications with containers.",
-            "icon": "🐳",
-            "category": "Platform"
-        },
-        {
-            "name": "Web Assembly",
-            "description": "A low-level, high-performance binary format that can be executed in modern web browsers and runtimes, offering near-native performance.",
-            "icon": "🕸️",
-            "category": "Web Technology"
-        },
-        {
-            "name": "Bash Scripting",
-            "description": "The act of writing scripts using the Bash shell language, which is commonly used in Linux and Unix systems for automating tasks and performing command-line operations.",
-            "icon": "🐚",
-            "category": "Scripting Language"
-        },
-        {
-            "name": "Java",
-            "description": "A high-level, object-oriented programming language used for building scalable and secure applications, especially in the enterprise environment.",
-            "icon": "☕",
-            "category": "Programming Language"
-        },
-        {
-            "name": "Python",
-            "description": "A high-level programming language used for a wide range of tasks such as web development, data analysis, artificial intelligence, and more.",
-            "icon": "🐍",
-            "category": "Programming Language"
-        },
-        {
-            "name": "Spring Boot",
-            "description": "A popular Java-based framework for building scalable and high-performing microservices and web applications.",
-            "icon": "🌱",
-            "category": "Framework"
-        },
-        {
-            "name": "React.js",
-            "description": "A JavaScript library for building user interfaces using a component-based approach.",
-            "icon": "💻",
-            "category": "JavaScript Library"
-        },
-        {
-            "name": "Next.js",
-            "description": "A React-based framework for building server-side rendered and statically exported web applications.",
-            "icon": "🚀",
-            "category": "Framework"
-        }
-    ]
+  "skills": [
+    {
+      "name": "Rust Programming Language",
+      "description": "A systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.",
+      "icon": "🦀",
+      "category": "Programming Language"
+    },
+    {
+      "name": "Linux",
+      "description": "An open-source kernel that is widely used for servers, desktops, and IoT devices.",
+      "icon": "🐧",
+      "category": "Operating System"
+    },
+    {
+      "name": "Fedora",
+      "description": "A Linux distribution developed by the community-supported Fedora Project and sponsored by Red Hat.",
+      "icon": "🎩",
+      "category": "Operating System"
+    },
+    {
+      "name": "Machine Learning",
+      "description": "A field of artificial intelligence that focuses on the development of algorithms that can learn patterns from data.",
+      "icon": "🧠",
+      "category": "Artificial Intelligence"
+    },
+    {
+      "name": "JavaScript",
+      "description": "A high-level, dynamic, and interpreted programming language used primarily for creating interactive web pages and web applications.",
+      "icon": "💻",
+      "category": "Programming Language"
+    },
+    {
+      "name": "Docker",
+      "description": "A platform for developers and sysadmins to develop, deploy, and run applications with containers.",
+      "icon": "🐳",
+      "category": "Platform"
+    },
+    {
+      "name": "Podman",
+      "description": "A daemonless container engine for developing, managing, and running Open Container Initiative (OCI) containers and container images on your Linux System.",
+      "icon": "🦭",
+      "category": "Platform"
+    },
+    {
+      "name": "Bash Scripting",
+      "description": "The act of writing scripts using the Bash shell language, which is commonly used in Linux and Unix systems for automating tasks and performing command-line operations.",
+      "icon": "🐚",
+      "category": "Scripting Language"
+    },
+    {
+      "name": "AWK",
+      "description": "A versatile programming language designed for pattern scanning and processing language.",
+      "icon": "🦉",
+      "category": "Programming Language"
+    },
+    {
+      "name": "Java",
+      "description": "A high-level, object-oriented programming language used for building scalable and secure applications, especially in the enterprise environment.",
+      "icon": "☕",
+      "category": "Programming Language"
+    },
+    {
+      "name": "Python",
+      "description": "A high-level programming language used for a wide range of tasks such as web development, data analysis, artificial intelligence, and more.",
+      "icon": "🐍",
+      "category": "Programming Language"
+    },
+    {
+      "name": "React.js",
+      "description": "A JavaScript library for building user interfaces using a component-based approach.",
+      "icon": "💻",
+      "category": "JavaScript Library"
+    },
+    {
+      "name": "Laravel",
+      "description": "A PHP-based framework for building web applications following the MVC pattern.",
+      "icon": "🚀",
+      "category": "Framework"
+    },
+    {
+      "name": "PHP",
+      "description": "A popular server-side scripting language used for building dynamic web pages and web applications.",
+      "icon": "🐘",
+      "category": "Programming Language"
+    },
+    {
+      "name": "MySQL",
+      "description": "An open-source relational database management system that uses SQL for querying and managing data.",
+      "icon": "🗄️",
+      "category": "Database"
+    },
+    {
+      "name": "Git",
+      "description": "A distributed version control system used for tracking changes in source code during software development.",
+      "icon": "🌳",
+      "category": "Version Control"
+    },
+    {
+      "name": "PostgreSQL",
+      "description": "An open-source object-relational database system known for its reliability, robustness, and performance.",
+      "icon": "🐘",
+      "category": "Database"
+    },
+    {
+      "name": "SQLite",
+      "description": "A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.",
+      "icon": "💾",
+      "category": "Database"
+    },
+    {
+      "name": "NeoVim",
+      "description": "A highly configurable, improved version of the Vim text editor.",
+      "icon": "📝",
+      "category": "Text Editor"
+    }
+  ]
 }
