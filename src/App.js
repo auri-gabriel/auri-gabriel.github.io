@@ -3,6 +3,7 @@ import Hero from './hero/Hero';
 import Skills from './skills/Skills';
 import Footer from './footer/Footer';
 import Container from './layout/Container';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
         <Skills />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </Container>
   );
 };
