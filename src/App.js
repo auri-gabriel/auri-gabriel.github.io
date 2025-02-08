@@ -4,6 +4,7 @@ import Skills from './skills/Skills';
 import Footer from './footer/Footer';
 import Container from './layout/Container';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import Experience from './experience/Experience';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <main>
         <Hero />
         <Skills />
+        <Experience />
       </main>
       <Footer />
       <ScrollToTopButton />
