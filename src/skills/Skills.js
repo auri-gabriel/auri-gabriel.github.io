@@ -18,19 +18,20 @@ const Skills = () => {
     setShowAll(!showAll);
   };
 
-  const toggleCategory = (category) => {
-    setSelectedCategories((prevSelectedCategories) => {
-      if (prevSelectedCategories.includes(category)) {
-        if (prevSelectedCategories.length === 1) {
-          return prevSelectedCategories;
-        } else {
-          return prevSelectedCategories.filter((c) => c !== category);
-        }
-      } else {
-        return [...prevSelectedCategories, category];
-      }
-    });
-  };
+const toggleCategory = (category) => {
+  setSelectedCategories((prevSelectedCategories) => {
+    // If the clicked category is the only one selected, select all
+    if (
+      prevSelectedCategories.length === 1 &&
+      prevSelectedCategories.includes(category)
+    ) {
+      return uniqueCategories;
+    } else {
+      // Otherwise, select only the clicked category
+      return [category];
+    }
+  });
+};
 
   return (
     <section
