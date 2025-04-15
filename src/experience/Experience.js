@@ -8,6 +8,13 @@ const Experience = () => {
       duration: "May 2024 - Present",
       summary:
         "Front-End Developer at Compass.UOL. Working with Salesforce B2C and other technologies to create innovative applications.",
+      clients: [
+        {
+          name: "Sem Parar",
+          duration: "May 2024 - Present",
+          summary: "Worked on e-commerce platform using SFRA, building pages, components, controllers with API's integrations."
+        }
+      ]
     },
     {
       title: "Teaching and Monitoring Scholarship in Curricular Component",
