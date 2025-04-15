@@ -12,7 +12,7 @@ const Experience = () => {
         {
           name: "Sem Parar",
           duration: "May 2024 - Present",
-          summary: "Worked on e-commerce platform using SFRA, building pages, components, controllers with API's integrations."
+          summary: "Worked on e-commerce platform using SFRA, building pages, components and controllers with API's integrations."
         }
       ]
     },
