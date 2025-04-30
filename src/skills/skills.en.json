@@ -113,6 +113,60 @@
       "description": "A highly configurable, improved version of the Vim text editor.",
       "icon": "📝",
       "category": "Text Editor"
+    },
+    {
+      "name": "VS Code",
+      "description": "A lightweight but powerful source code editor developed by Microsoft, supporting many programming languages and extensions.",
+      "icon": "🧩",
+      "category": "Text Editor"
+    },
+    {
+      "name": "IntelliJ IDEA",
+      "description": "An IDE developed by JetBrains for developing with Java and other JVM languages, known for smart code completion and deep integration with frameworks.",
+      "icon": "🧠",
+      "category": "IDE"
+    },
+    {
+      "name": "Spring Boot",
+      "description": "A framework that simplifies the development of Java-based enterprise applications by providing production-ready defaults.",
+      "icon": "🌱",
+      "category": "Framework"
+    },
+    {
+      "name": "Node.js",
+      "description": "A JavaScript runtime built on Chrome's V8 engine, used for building scalable network applications.",
+      "icon": "🟢",
+      "category": "Runtime Environment"
+    },
+    {
+      "name": "Nest.js",
+      "description": "A progressive Node.js framework for building efficient and scalable server-side applications using TypeScript.",
+      "icon": "🛡️",
+      "category": "Framework"
+    },
+    {
+      "name": "MongoDB",
+      "description": "A document-oriented NoSQL database used for high volume data storage, known for its flexibility and scalability.",
+      "icon": "🍃",
+      "category": "Database"
+    },
+    {
+      "name": "Salesforce Commerce Cloud B2C",
+      "description": "A cloud-based e-commerce platform that enables brands to deliver personalized shopping experiences across channels.",
+      "icon": "🛍️",
+      "category": "E-commerce Platform"
+    },
+    {
+      "name": "SFRA",
+      "description": "Salesforce Reference Architecture is a customizable front-end framework used with Salesforce Commerce Cloud to accelerate storefront development.",
+      "icon": "📐",
+      "category": "Framework"
+    },
+    {
+      "name": "SFCC",
+      "description": "Salesforce Commerce Cloud is a cloud-based platform for unifying digital commerce, order management, and AI-driven personalization.",
+      "icon": "☁️",
+      "category": "E-commerce Platform"
     }
   ]
 }
