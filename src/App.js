@@ -8,15 +8,21 @@ import Experience from './experience/Experience';
 
 const App = () => {
   return (
-    <Container>
+    <>
       <main>
         <Hero />
-        <Skills />
-        <Experience />
+        <Container>
+          <Skills />
+        </Container>
+        <Container>
+          <Experience />
+        </Container>
       </main>
-      <Footer />
+      <Container>
+        <Footer />
+      </Container>
       <ScrollToTopButton />
-    </Container>
+    </>
   );
 };
 
