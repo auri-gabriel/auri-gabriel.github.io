@@ -73,7 +73,7 @@ const Skills = () => {
           .length > 6 && (
           <div className='flex justify-center'>
             <Button
-              className='text-gray-700 bg-white'
+              className='text-gray-700 rounded-none bg-white'
               onClick={handleShowAll}
               text={showAll ? 'Show Less' : 'Show More'}
             />
@@ -98,7 +98,10 @@ const Skills = () => {
           justify-center
           rounded-lg'
           >
-            <div className='h-6 w-6 text-2xl' aria-hidden='true'>
+            <div
+              className='aspect-square p-3 rounded-full text-2xl border shadow-md'
+              aria-hidden='true'
+            >
               {skill.icon}
             </div>
           </div>
