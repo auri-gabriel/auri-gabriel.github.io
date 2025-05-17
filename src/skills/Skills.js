@@ -18,33 +18,32 @@ const Skills = () => {
     setShowAll(!showAll);
   };
 
-const toggleCategory = (category) => {
-  setSelectedCategories((prevSelectedCategories) => {
-    // If the clicked category is the only one selected, select all
-    if (
-      prevSelectedCategories.length === 1 &&
-      prevSelectedCategories.includes(category)
-    ) {
-      return uniqueCategories;
-    } else {
-      // Otherwise, select only the clicked category
-      return [category];
-    }
-  });
-};
+  const toggleCategory = (category) => {
+    setSelectedCategories((prevSelectedCategories) => {
+      // If the clicked category is the only one selected, select all
+      if (
+        prevSelectedCategories.length === 1 &&
+        prevSelectedCategories.includes(category)
+      ) {
+        return uniqueCategories;
+      } else {
+        // Otherwise, select only the clicked category
+        return [category];
+      }
+    });
+  };
 
   return (
     <section
       id='skills'
       className='
         w-full
-        min-h-screen
         mx-auto
         pt-16
         '
     >
       <div className='mx-auto max-w-2xl lg:text-center'>
-        <h2 className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
+        <h2 className='mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl'>
           The technologies I use
         </h2>
         {/* <p className='mt-6 text-lg leading-8 text-gray-600'>
@@ -74,7 +73,7 @@ const toggleCategory = (category) => {
           .length > 6 && (
           <div className='flex justify-center'>
             <Button
-              className='text-gray-700'
+              className='text-gray-700 bg-white'
               onClick={handleShowAll}
               text={showAll ? 'Show Less' : 'Show More'}
             />

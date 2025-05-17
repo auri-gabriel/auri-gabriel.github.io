@@ -4,7 +4,6 @@ const Pill = (props) => {
   return (
     <button
       className={`
-      rounded-full
       mx-1
       my-1
       p-2
@@ -13,8 +12,8 @@ const Pill = (props) => {
       hover:drop-shadow-md
       ${
         props.active
-          ? 'bg-gray-900 text-white border-transparent'
-          : 'bg-transparent border border-gray-900'
+          ? 'bg-primary-blue text-white border-transparent'
+          : 'bg-transparent border border-primary-blue'
       }
       `}
       onClick={props.onClick}
