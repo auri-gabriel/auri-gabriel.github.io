@@ -173,6 +173,18 @@
       "description": "A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
       "icon": "📘",
       "category": "Programming Language"
+    },
+    {
+      "name": "Dart",
+      "description": "A client-optimized programming language for fast apps on any platform, developed by Google and used for building mobile, desktop, server, and web applications.",
+      "icon": "🎯",
+      "category": "Programming Language"
+    },
+    {
+      "name": "Flutter",
+      "description": "An open-source UI software development toolkit created by Google for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+      "icon": "🔵",
+      "category": "Framework"
     }
   ]
 }
