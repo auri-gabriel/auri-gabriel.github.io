@@ -83,19 +83,20 @@ const Hero = () => {
     <section
       id='hero'
       className='
-        w-full
-        h-screen
-        mx-auto
-        text-center
-        flex
-        flex-col
-        justify-between
-        bg-primary-blue
-        relative
-        overflow-hidden
-        '
+      w-full
+      h-screen
+      mx-auto
+      text-center
+      flex
+      flex-col
+      justify-between
+      bg-primary-blue
+      relative
+      overflow-hidden
+      '
       style={{ zIndex: 1 }}
     >
+      {/* Emoji background */}
       <div
         aria-hidden='true'
         style={{
@@ -125,6 +126,18 @@ const Hero = () => {
             {e.emoji}
           </span>
         ))}
+        {/* Dark overlay for better contrast */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            background: 'rgba(0,0,0,0.45)',
+            zIndex: 1,
+            pointerEvents: 'none',
+          }}
+        />
       </div>
       <div
         className='flex-grow flex flex-col justify-center'
