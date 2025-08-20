@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Auri Gabriel",
+  "name": "Auri Gabriel - Salesforce Commerce Cloud Developer",
+  "description": "Desenvolvedor Salesforce Commerce Cloud especializado em React, AWS e e-commerce. Portfolio profissional e experiências.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +21,14 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#1e40af",
+  "background_color": "#ffffff",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ]
 }

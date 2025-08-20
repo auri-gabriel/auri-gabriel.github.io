@@ -144,18 +144,24 @@ const Hero = () => {
           }}
         />
       </div>
-      <div
+      <header
         className='flex-grow flex flex-col justify-center'
         style={{ position: 'relative', zIndex: 1 }}
       >
         <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
           {t('hero.greeting')}
         </h1>
-        <h1 className='text-7xl lg:py-8 py-4'>🚀</h1>
+        <div
+          className='text-7xl lg:py-8 py-4'
+          role='img'
+          aria-label='Rocket emoji'
+        >
+          🚀
+        </div>
         <p className='mt-6 text-lg leading-8 text-gray-300'>
           {t('hero.description')}
         </p>
-      </div>
+      </header>
       <div
         className='pb-36 flex-none'
         style={{ position: 'relative', zIndex: 1 }}

@@ -21,6 +21,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
+    lng: 'en', // idioma padrão
     debug: process.env.NODE_ENV === 'development',
 
     interpolation: {
@@ -28,7 +29,7 @@ i18n
     },
 
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage'], // apenas localStorage para persistir preferência
       caches: ['localStorage'],
     },
   });
