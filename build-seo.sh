@@ -13,19 +13,19 @@ rm -rf dist/
 
 # Build the project
 echo "📦 Building React app..."
-npm run build
+npm run build:basic
+
+# Copy 404.html for GitHub Pages SPA routing
+echo "🔄 Setting up SPA routing for GitHub Pages..."
+cp public/404.html dist/404.html
 
 # Copy build to docs folder (for GitHub Pages)
 echo "📋 Copying build to docs folder..."
 cp -r dist/* docs/ 2>/dev/null || mkdir -p docs && cp -r dist/* docs/
 
-# Copy 404.html for GitHub Pages SPA routing
-echo "🔄 Setting up SPA routing for GitHub Pages..."
-cp public/404.html docs/404.html
-
 # Generate robots.txt for production
 echo "🤖 Updating robots.txt for production..."
-cat > docs/robots.txt << EOF
+cat > dist/robots.txt << EOF
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
@@ -43,15 +43,21 @@ EOF
 
 # Update sitemap with current date
 echo "🗺️ Updating sitemap..."
-sed -i "s/<lastmod>.*<\/lastmod>/<lastmod>$(date +%Y-%m-%d)<\/lastmod>/g" docs/sitemap.xml
+sed -i "s/<lastmod>.*<\/lastmod>/<lastmod>$(date +%Y-%m-%d)<\/lastmod>/g" dist/sitemap.xml
+
+# Copy to docs folder if it doesn't exist yet
+if [ ! -d "docs" ]; then
+    echo "📋 Copying to docs folder for GitHub Pages..."
+    cp -r dist docs
+fi
 
 echo "✅ Build completed! Ready for deployment."
-echo "📁 Files are in the 'docs' folder."
+echo "📁 Files are in the 'dist' folder (and copied to 'docs' for GitHub Pages)."
 echo ""
 echo "🌐 Language Routes Available:"
-echo "  - / (redirects to /pt)"
+echo "  - / (redirects to /en)"
+echo "  - /en (English - default)"
 echo "  - /pt (Portuguese)"
-echo "  - /en (English)"
 echo ""
 echo "Next steps for SEO:"
 echo "1. Add your Google Analytics ID to .env"

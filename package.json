@@ -20,7 +20,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "BUILD_PATH='./dist' react-scripts build",
+    "build": "./build-seo.sh",
+    "build:basic": "BUILD_PATH='./dist' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
