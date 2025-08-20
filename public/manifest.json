@@ -4,14 +4,29 @@
   "description": "Desenvolvedor Salesforce Commerce Cloud especializado em React, AWS e e-commerce. Portfolio profissional e experiências.",
   "icons": [
     {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
+      "src": "logo192.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192"
+    },
+    {
       "src": "logo192.png",
       "type": "image/png",
       "sizes": "192x192"
+    },
+    {
+      "src": "logo512.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
     },
     {
       "src": "logo512.png",
@@ -24,7 +39,6 @@
   "theme_color": "#1e40af",
   "background_color": "#ffffff",
   "scope": "/",
-  "lang": "pt-BR",
   "dir": "ltr",
   "categories": [
     "business",
