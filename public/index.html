@@ -2,10 +2,63 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Auri Gabriel Personal Site" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Auri Gabriel - Salesforce Commerce Cloud Developer especializado em React, AWS e e-commerce. Desenvolvedor Front-End com experiência em SFRA e tecnologias modernas."
+    />
+    <meta
+      name="keywords"
+      content="Auri Gabriel, Salesforce Commerce Cloud, React Developer, Front-End Developer, AWS, SFRA, JavaScript, Web Developer, E-commerce Developer, Brasil"
+    />
+    <meta name="author" content="Auri Gabriel" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="pt-BR" />
+    <meta name="geo.region" content="BR" />
+    <meta name="geo.country" content="Brasil" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="Auri Gabriel - Salesforce Commerce Cloud Developer"
+    />
+    <meta
+      property="og:description"
+      content="Desenvolvedor Salesforce Commerce Cloud especializado em React, AWS e e-commerce. Portfolio e experiências profissionais."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://aurigabriel.com" />
+    <meta property="og:image" content="https://aurigabriel.com/logo512.png" />
+    <meta property="og:site_name" content="Auri Gabriel Portfolio" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Auri Gabriel - Salesforce Commerce Cloud Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Desenvolvedor Salesforce Commerce Cloud especializado em React, AWS e e-commerce."
+    />
+    <meta name="twitter:image" content="https://aurigabriel.com/logo512.png" />
+    <meta name="twitter:creator" content="@auri_gabriel" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aurigabriel.com" />
+
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="pt-BR" href="https://aurigabriel.com/pt" />
+    <link rel="alternate" hreflang="en" href="https://aurigabriel.com/en" />
+    <link rel="alternate" hreflang="x-default" href="https://aurigabriel.com" />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -22,10 +75,46 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Auri Gabriel</title>
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which won't cause the browser to attempt to load the new url.
+      // When the single page app is loaded further down in this file,
+      // the correct url will be waiting in the browser's history for
+      // the single page app to route accordingly.
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      })(window.location);
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <a style="display: none;"rel="me" href="https://mastodon.social/@auri_gabriel">Mastodon</a>
+    <a
+      style="display: none"
+      rel="me"
+      href="https://mastodon.social/@auri_gabriel"
+      >Mastodon</a
+    >
   </body>
 </html>

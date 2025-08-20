@@ -1,4 +1,8 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
 const JobItem = ({ title, company, duration, summary, clients }) => {
+  const { t } = useTranslation();
   return (
     <section className='job-item p-4 border shadow-md'>
       <div className='job-details mb-2'>
@@ -12,7 +16,9 @@ const JobItem = ({ title, company, duration, summary, clients }) => {
 
       {clients && (
         <div className='clients mt-4 pl-4 border-l-2 border-gray-300'>
-          <h4 className='font-medium text-gray-800 mb-2'>Clients:</h4>
+          <h4 className='font-medium text-gray-800 mb-2'>
+            {t('experience.clientsLabel')}
+          </h4>
           {clients.map((client, index) => (
             <div key={index} className='mb-2'>
               <p className='font-semibold'>{client.name}</p>

@@ -1,0 +1,190 @@
+{
+    "skills": [
+        {
+            "name": "Linguagem de Programação Rust",
+            "description": "Uma linguagem de programação de sistemas que roda extremamente rápida, previne falhas de segmentação e garante segurança de thread.",
+            "icon": "🦀",
+            "category": "Linguagem de Programação"
+        },
+        {
+            "name": "Linux",
+            "description": "Um kernel de código aberto amplamente usado para servidores, desktops e dispositivos IoT.",
+            "icon": "🐧",
+            "category": "Sistema Operacional"
+        },
+        {
+            "name": "Fedora",
+            "description": "Uma distribuição Linux desenvolvida pelo projeto Fedora apoiado pela comunidade e patrocinado pela Red Hat.",
+            "icon": "🎩",
+            "category": "Sistema Operacional"
+        },
+        {
+            "name": "Aprendizado de Máquina",
+            "description": "Um campo da inteligência artificial focado no desenvolvimento de algoritmos que podem aprender padrões dos dados.",
+            "icon": "🧠",
+            "category": "Inteligência Artificial"
+        },
+        {
+            "name": "JavaScript",
+            "description": "Uma linguagem de programação de alto nível, dinâmica e interpretada usada principalmente para criar páginas web interativas e aplicações web.",
+            "icon": "💻",
+            "category": "Linguagem de Programação"
+        },
+        {
+            "name": "Docker",
+            "description": "Uma plataforma para desenvolvedores e administradores de sistema desenvolverem, implantarem e executarem aplicações com containers.",
+            "icon": "🐳",
+            "category": "Plataforma"
+        },
+        {
+            "name": "Podman",
+            "description": "Um motor de containers sem daemon para desenvolver, gerenciar e executar containers e imagens de containers OCI no seu sistema Linux.",
+            "icon": "🦭",
+            "category": "Plataforma"
+        },
+        {
+            "name": "Bash Scripting",
+            "description": "O ato de escrever scripts usando a linguagem shell Bash, comumente usada em sistemas Linux e Unix para automatizar tarefas e realizar operações de linha de comando.",
+            "icon": "🐚",
+            "category": "Linguagem de Script"
+        },
+        {
+            "name": "AWK",
+            "description": "Uma linguagem de programação versátil projetada para escaneamento de padrões e processamento de linguagem.",
+            "icon": "🦉",
+            "category": "Linguagem de Programação"
+        },
+        {
+            "name": "Java",
+            "description": "Uma linguagem de programação de alto nível orientada a objetos usada para construir aplicações escaláveis e seguras, especialmente no ambiente empresarial.",
+            "icon": "☕",
+            "category": "Linguagem de Programação"
+        },
+        {
+            "name": "Python",
+            "description": "Uma linguagem de programação de alto nível usada para uma ampla gama de tarefas como desenvolvimento web, análise de dados, inteligência artificial e mais.",
+            "icon": "🐍",
+            "category": "Linguagem de Programação"
+        },
+        {
+            "name": "React.js",
+            "description": "Uma biblioteca JavaScript para construir interfaces de usuário usando uma abordagem baseada em componentes.",
+            "icon": "💻",
+            "category": "Biblioteca JavaScript"
+        },
+        {
+            "name": "Laravel",
+            "description": "Um framework baseado em PHP para construir aplicações web seguindo o padrão MVC.",
+            "icon": "🚀",
+            "category": "Framework"
+        },
+        {
+            "name": "PHP",
+            "description": "Uma linguagem de script server-side popular usada para construir páginas web dinâmicas e aplicações web.",
+            "icon": "🐘",
+            "category": "Linguagem de Programação"
+        },
+        {
+            "name": "MySQL",
+            "description": "Um sistema de gerenciamento de banco de dados relacional de código aberto que usa SQL para consultar e gerenciar dados.",
+            "icon": "🗄️",
+            "category": "Banco de Dados"
+        },
+        {
+            "name": "Git",
+            "description": "Um sistema de controle de versão distribuído usado para rastrear mudanças no código fonte durante o desenvolvimento de software.",
+            "icon": "🌳",
+            "category": "Controle de Versão"
+        },
+        {
+            "name": "PostgreSQL",
+            "description": "Um sistema de banco de dados objeto-relacional de código aberto conhecido por sua confiabilidade, robustez e performance.",
+            "icon": "🐘",
+            "category": "Banco de Dados"
+        },
+        {
+            "name": "SQLite",
+            "description": "Uma biblioteca em linguagem C que implementa um motor de banco de dados SQL pequeno, rápido, autocontido, de alta confiabilidade e completo.",
+            "icon": "💾",
+            "category": "Banco de Dados"
+        },
+        {
+            "name": "NeoVim",
+            "description": "Uma versão altamente configurável e melhorada do editor de texto Vim.",
+            "icon": "📝",
+            "category": "Editor de Texto"
+        },
+        {
+            "name": "VS Code",
+            "description": "Um editor de código fonte leve mas poderoso desenvolvido pela Microsoft, suportando muitas linguagens de programação e extensões.",
+            "icon": "🧩",
+            "category": "Editor de Texto"
+        },
+        {
+            "name": "IntelliJ IDEA",
+            "description": "Uma IDE desenvolvida pela JetBrains para desenvolvimento com Java e outras linguagens JVM, conhecida por autocompletar inteligente e integração profunda com frameworks.",
+            "icon": "🧠",
+            "category": "IDE"
+        },
+        {
+            "name": "Spring Boot",
+            "description": "Um framework que simplifica o desenvolvimento de aplicações empresariais baseadas em Java fornecendo padrões prontos para produção.",
+            "icon": "🌱",
+            "category": "Framework"
+        },
+        {
+            "name": "Node.js",
+            "description": "Um runtime JavaScript construído no motor V8 do Chrome, usado para construir aplicações de rede escaláveis.",
+            "icon": "🟢",
+            "category": "Ambiente de Execução"
+        },
+        {
+            "name": "Nest.js",
+            "description": "Um framework Node.js progressivo para construir aplicações server-side eficientes e escaláveis usando TypeScript.",
+            "icon": "🛡️",
+            "category": "Framework"
+        },
+        {
+            "name": "MongoDB",
+            "description": "Um banco de dados NoSQL orientado a documentos usado para armazenamento de dados de alto volume, conhecido por sua flexibilidade e escalabilidade.",
+            "icon": "🍃",
+            "category": "Banco de Dados"
+        },
+        {
+            "name": "Salesforce Commerce Cloud B2C",
+            "description": "Uma plataforma de e-commerce baseada na nuvem que permite marcas entregar experiências de compra personalizadas através de canais.",
+            "icon": "🛍️",
+            "category": "Plataforma de E-commerce"
+        },
+        {
+            "name": "SFRA",
+            "description": "Arquitetura de Referência Salesforce é um framework front-end customizável usado com Salesforce Commerce Cloud para acelerar o desenvolvimento de storefront.",
+            "icon": "📐",
+            "category": "Framework"
+        },
+        {
+            "name": "SFCC",
+            "description": "Salesforce Commerce Cloud é uma plataforma baseada na nuvem para unificar comércio digital, gerenciamento de pedidos e personalização orientada por IA.",
+            "icon": "☁️",
+            "category": "Plataforma de E-commerce"
+        },
+        {
+            "name": "TypeScript",
+            "description": "Uma linguagem de programação fortemente tipada que se baseia no JavaScript, oferecendo melhores ferramentas em qualquer escala.",
+            "icon": "📘",
+            "category": "Linguagem de Programação"
+        },
+        {
+            "name": "Dart",
+            "description": "Uma linguagem de programação otimizada para cliente para aplicações rápidas em qualquer plataforma, desenvolvida pelo Google e usada para construir aplicações mobile, desktop, servidor e web.",
+            "icon": "🎯",
+            "category": "Linguagem de Programação"
+        },
+        {
+            "name": "Flutter",
+            "description": "Um kit de ferramentas de desenvolvimento de software UI de código aberto criado pelo Google para construir aplicações compiladas nativamente para mobile, web e desktop a partir de uma única base de código.",
+            "icon": "🔵",
+            "category": "Framework"
+        }
+    ]
+}

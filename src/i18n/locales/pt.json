@@ -1,0 +1,55 @@
+{
+    "hero": {
+        "greeting": "Olá, eu sou o Auri Gabriel!",
+        "description": "Sou desenvolvedor Salesforce Commerce Cloud na Compass.uol"
+    },
+    "skills": {
+        "title": "As tecnologias que uso",
+        "showMore": "Ver Mais",
+        "showLess": "Ver Menos"
+    },
+    "experience": {
+        "title": "Experiência Profissional",
+        "jobs": [
+            {
+                "title": "Desenvolvedor Salesforce Commerce Cloud",
+                "company": "Compass.uol",
+                "duration": "Maio 2024 - Presente",
+                "summary": "Desenvolvedor Salesforce Commerce Cloud na Compass.uol. Trabalhando com Salesforce B2C para criar uma plataforma de e-commerce de serviços.",
+                "clients": [
+                    {
+                        "name": "Sem Parar",
+                        "duration": "Maio 2024 - Presente",
+                        "summary": "Trabalhou na plataforma de e-commerce usando SFRA, construindo páginas, componentes e controladores com integrações de APIs."
+                    }
+                ]
+            },
+            {
+                "title": "Bolsa de Ensino e Monitoria em Componente Curricular",
+                "company": "Universidade Federal do Pampa",
+                "duration": "Maio 2023 - Nov 2023",
+                "summary": "Posição de meio período no GEIHC - Grupo de Estudos em Interação Humano-Computador. Participou de reuniões, apoiou o desenvolvimento de Seminários Abertos, promoveu atividades de grupo, conduziu estudos dirigidos, liderou workshops, realizou revisão de literatura, contribuiu para a criação de materiais educacionais, submeteu relatórios de experiência e preparou relatórios de atividades."
+            },
+            {
+                "title": "Estágio em Desenvolvimento Front-End",
+                "company": "Compass.uol",
+                "duration": "Maio 2023 - Out 2023",
+                "summary": "Estágio focado em Desenvolvimento Front-End (React) com foco no contexto AWS Cloud na Compass.UOL. Responsabilidades incluem aprimorar habilidades em desenvolvimento front-end, trabalhar com tecnologias como React e AWS, e contribuir para a criação de aplicações inovadoras."
+            }
+        ],
+        "clientsLabel": "Clientes:"
+    },
+    "footer": {
+        "copyright": "© {{year}} <1>Auri Gabriel</1>. Todos os Direitos Reservados.",
+        "socialLinks": {
+            "facebook": "Perfil do Facebook",
+            "instagram": "Perfil do Instagram",
+            "twitter": "Perfil do Twitter",
+            "github": "Conta do GitHub",
+            "mastodon": "Conta do Mastodon"
+        }
+    },
+    "common": {
+        "scrollToTop": "Voltar ao topo"
+    }
+}

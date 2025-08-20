@@ -1,4 +1,5 @@
 import React from 'react';
+import { Trans } from 'react-i18next';
 
 const Footer = () => {
   return (
@@ -6,11 +7,20 @@ const Footer = () => {
       <hr className='my-6 border-gray-200 sm:mx-auto  lg:my-8' />
       <div className='sm:flex sm:items-center sm:justify-between'>
         <span className='text-sm text-gray-500 sm:text-center'>
-          © {new Date().getFullYear()}{' '}
-          <a href='https://auri-gabriel.github.io/' className='hover:underline'>
-            Auri Gabriel
-          </a>
-          . All Rights Reserved.
+          <Trans
+            i18nKey='footer.copyright'
+            values={{ year: new Date().getFullYear() }}
+            components={{
+              1: (
+                <a
+                  href='https://auri-gabriel.github.io/'
+                  className='hover:underline'
+                >
+                  Auri Gabriel
+                </a>
+              ),
+            }}
+          />
         </span>
         <div className='flex mt-4 space-x-6 sm:justify-center sm:mt-0'>
           <a

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import skillsData from '../skills/skills.en.json';
+import { useTranslation } from 'react-i18next';
+import skillsEn from '../i18n/locales/skills.en.json';
+import skillsPt from '../i18n/locales/skills.pt.json';
 
 const EMOJI_COUNT = 25;
 const EMOJI_MIN_SIZE = 32;
@@ -57,6 +59,7 @@ const Hero = () => {
   // eslint-disable-next-line
   const [hash, setHash] = useState('');
   const [backgroundEmojis, setBackgroundEmojis] = useState([]);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -64,6 +67,8 @@ const Hero = () => {
     };
     window.addEventListener('hashchange', handleHashChange);
 
+    // Get skills data based on current language
+    const skillsData = i18n.language === 'pt' ? skillsPt : skillsEn;
     const emojis = skillsData.skills.map((s) => s.icon);
     const placed = generateNonOverlappingEmojis(emojis, EMOJI_COUNT);
     setBackgroundEmojis(placed);
@@ -72,7 +77,7 @@ const Hero = () => {
       window.removeEventListener('hashchange', handleHashChange);
     };
     // eslint-disable-next-line
-  }, []);
+  }, [i18n.language]);
 
   const handleButtonClick = (event) => {
     event.preventDefault();
@@ -139,18 +144,24 @@ const Hero = () => {
           }}
         />
       </div>
-      <div
+      <header
         className='flex-grow flex flex-col justify-center'
         style={{ position: 'relative', zIndex: 1 }}
       >
         <h1 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
-          Hi there, I'm Auri Gabriel!
+          {t('hero.greeting')}
         </h1>
-        <h1 className='text-7xl lg:py-8 py-4'>🚀</h1>
+        <div
+          className='text-7xl lg:py-8 py-4'
+          role='img'
+          aria-label='Rocket emoji'
+        >
+          🚀
+        </div>
         <p className='mt-6 text-lg leading-8 text-gray-300'>
-          I'm a Salesforce Commerce Cloud Developer @ Compass.uol
+          {t('hero.description')}
         </p>
-      </div>
+      </header>
       <div
         className='pb-36 flex-none'
         style={{ position: 'relative', zIndex: 1 }}
