@@ -15,12 +15,12 @@
                 "title": "Salesforce Commerce Cloud Developer",
                 "company": "Compass.uol",
                 "duration": "May 2024 - Present",
-                "summary": "Salesforce Commerce Cloud Developer at Compass.uol. Working with Salesforce B2C to create a service e-commerce platform.",
+                "summary": "Salesforce Commerce Cloud Developer at Compass.uol. Working with Salesforce B2C to create e-commerce platforms.",
                 "clients": [
                     {
                         "name": "Sem Parar",
                         "duration": "May 2024 - Present",
-                        "summary": "Worked on e-commerce platform using SFRA, building pages, components and controllers with API's integrations."
+                        "summary": "Contributed to a seamless migration of e-commerce functionalities from a legacy VTEX platform to Salesforce Commerce Cloud B2C. Built and deployed partnership landing pages, connected partnership systems by developing API connections to validate client cards with external partners, and developed the new billing payment page with API integration and automated PDF document generation. Created reusable and dynamic components for the SFCC Page Designer, empowering non-technical users to efficiently build and customize storefront experiences."
                     }
                 ]
             },
