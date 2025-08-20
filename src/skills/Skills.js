@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import Button from '../components/Button';
 import Pill from '../components/Pill';
-import skillsJson from './skills.en.json';
+import skillsEn from '../i18n/locales/skills.en.json';
+import skillsPt from '../i18n/locales/skills.pt.json';
 
 const Skills = () => {
-  const skills = skillsJson['skills'];
+  const { t, i18n } = useTranslation();
+
+  // Get skills data based on current language
+  const skillsData = i18n.language === 'pt' ? skillsPt : skillsEn;
+  const skills = skillsData['skills'];
 
   const uniqueCategories = Array.from(
     new Set(skills.map((skill) => skill.category))
@@ -44,7 +50,7 @@ const Skills = () => {
     >
       <div className='mx-auto max-w-2xl lg:text-center'>
         <h2 className='mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl'>
-          The technologies I use
+          {t('skills.title')}
         </h2>
         {/* <p className='mt-6 text-lg leading-8 text-gray-600'>
             Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
@@ -75,7 +81,7 @@ const Skills = () => {
             <Button
               className='text-gray-700 rounded-none bg-white'
               onClick={handleShowAll}
-              text={showAll ? 'Show Less' : 'Show More'}
+              text={showAll ? t('skills.showLess') : t('skills.showMore')}
             />
           </div>
         )}

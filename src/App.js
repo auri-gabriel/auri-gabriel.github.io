@@ -5,10 +5,12 @@ import Footer from './footer/Footer';
 import Container from './layout/Container';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import Experience from './experience/Experience';
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 const App = () => {
   return (
     <>
+      <LanguageSwitcher />
       <main>
         <Hero />
         <Container>

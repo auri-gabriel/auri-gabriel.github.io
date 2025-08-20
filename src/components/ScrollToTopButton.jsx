@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ScrollToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +28,8 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed text-xl bottom-10 right-10 aspect-square bg-primary-blue text-white px-4 py-2 rounded-full hover:drop-shadow-md focus:outline-none transition"
+      className='fixed text-xl bottom-10 right-10 aspect-square bg-primary-blue text-white px-4 py-2 rounded-full hover:drop-shadow-md focus:outline-none transition'
+      title={t('common.scrollToTop')}
     >
       ↑
     </button>
@@ -34,4 +37,3 @@ const ScrollToTopButton = () => {
 };
 
 export default ScrollToTopButton;
-
