@@ -8,7 +8,6 @@ export NODE_ENV=production
 
 # Clean previous builds
 echo "🧹 Cleaning previous builds..."
-rm -rf docs/
 rm -rf dist/
 
 # Build the project
@@ -18,10 +17,6 @@ npm run build:basic
 # Copy 404.html for GitHub Pages SPA routing
 echo "🔄 Setting up SPA routing for GitHub Pages..."
 cp public/404.html dist/404.html
-
-# Copy build to docs folder (for GitHub Pages)
-echo "📋 Copying build to docs folder..."
-cp -r dist/* docs/ 2>/dev/null || mkdir -p docs && cp -r dist/* docs/
 
 # Generate robots.txt for production
 echo "🤖 Updating robots.txt for production..."
@@ -45,14 +40,8 @@ EOF
 echo "🗺️ Updating sitemap..."
 sed -i "s/<lastmod>.*<\/lastmod>/<lastmod>$(date +%Y-%m-%d)<\/lastmod>/g" dist/sitemap.xml
 
-# Copy to docs folder if it doesn't exist yet
-if [ ! -d "docs" ]; then
-    echo "📋 Copying to docs folder for GitHub Pages..."
-    cp -r dist docs
-fi
-
 echo "✅ Build completed! Ready for deployment."
-echo "📁 Files are in the 'dist' folder (and copied to 'docs' for GitHub Pages)."
+echo "📁 Files are ready in the 'dist' folder for GitHub Pages."
 echo ""
 echo "🌐 Language Routes Available:"
 echo "  - / (redirects to /en)"
