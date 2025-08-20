@@ -7,7 +7,7 @@ const Experience = () => {
       company: 'Compass.uol',
       duration: 'May 2024 - Present',
       summary:
-        'Salesforce Commerce Cloud Developer Developer at Compass.UOL. Working with Salesforce B2C to create a service e-commerce platform.',
+        'Salesforce Commerce Cloud Developer at Compass.UOL. Working with Salesforce B2C to create a service e-commerce platform.',
       clients: [
         {
           name: 'Sem Parar',
