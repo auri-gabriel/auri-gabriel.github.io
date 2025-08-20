@@ -148,7 +148,7 @@ const Hero = () => {
         </h1>
         <h1 className='text-7xl lg:py-8 py-4'>🚀</h1>
         <p className='mt-6 text-lg leading-8 text-gray-300'>
-          I'm a Salesforce Commerce Cloud Developer developer @ Compass.uol
+          I'm a Salesforce Commerce Cloud Developer @ Compass.uol
         </p>
       </div>
       <div
