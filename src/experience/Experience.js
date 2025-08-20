@@ -3,11 +3,11 @@ import JobItem from './JobItem';
 const Experience = () => {
   const jobs = [
     {
-      title: 'Front-End Developer',
+      title: 'Salesforce Commerce Cloud Developer',
       company: 'Compass.uol',
       duration: 'May 2024 - Present',
       summary:
-        'Front-End Developer at Compass.UOL. Working with Salesforce B2C and other technologies to create innovative applications.',
+        'Salesforce Commerce Cloud Developer Developer at Compass.UOL. Working with Salesforce B2C to create a service e-commerce platform.',
       clients: [
         {
           name: 'Sem Parar',
