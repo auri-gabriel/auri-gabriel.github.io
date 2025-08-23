@@ -51,5 +51,21 @@
     },
     "common": {
         "scrollToTop": "Scroll to top"
+    },
+    "projects": {
+        "title": "Projects",
+        "viewProject": "View Project",
+        "fitme": {
+            "description": "A food ordering application."
+        },
+        "folioAgency": {
+            "description": "A modern portfolio website for a creative agency showcasing their work and services."
+        },
+        "semioticFramework": {
+            "description": "A tool for using a semiotic framework with software engineering to build educational software."
+        },
+        "tasks": {
+            "description": "A task management back-end."
+        }
     }
 }

@@ -3,6 +3,7 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Hero from '../hero/Hero';
 import Skills from '../skills/Skills';
+import Projects from '../projects/Projects';
 import Footer from '../footer/Footer';
 import Container from '../layout/Container';
 import ScrollToTopButton from '../components/ScrollToTopButton';
@@ -54,6 +55,9 @@ const LanguageRouter = () => {
         <Hero />
         <Container>
           <Skills />
+        </Container>
+        <Container>
+          <Projects />
         </Container>
         <Container>
           <Experience />
