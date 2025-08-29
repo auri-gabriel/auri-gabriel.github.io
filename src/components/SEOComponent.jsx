@@ -11,30 +11,31 @@ const SEOComponent = () => {
 
   const seoData = {
     pt: {
-      title: 'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud',
+      title: 'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud B2C',
       description:
-        'Desenvolvedor Salesforce Commerce Cloud especializado em React, AWS e e-commerce. Experiência em SFRA, JavaScript e tecnologias modernas. Portfolio profissional.',
+        'Desenvolvedor Salesforce Commerce Cloud B2C, React e JavaScript. Experiência em SFRA e tecnologias modernas. Portfolio profissional.',
       keywords:
-        'Auri Gabriel, Desenvolvedor Salesforce, Commerce Cloud, React, AWS, SFRA, JavaScript, Front-End, E-commerce, Brasil, Compass.uol',
-      ogTitle: 'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud',
+        'Auri Gabriel, Desenvolvedor Salesforce, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brasil, Compass.uol',
+      ogTitle: 'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud B2C',
       ogDescription:
-        'Desenvolvedor especializado em Salesforce Commerce Cloud, React e AWS. Veja meu portfolio e experiência profissional.',
-      twitterTitle: 'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud',
+        'Desenvolvedor Salesforce Commerce Cloud B2C, React e JavaScript. Veja meu portfolio e experiência profissional.',
+      twitterTitle:
+        'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud B2C',
       twitterDescription:
-        'Desenvolvedor Salesforce Commerce Cloud | React | AWS | E-commerce',
+        'Salesforce Commerce Cloud B2C | React | JavaScript | E-commerce',
     },
     en: {
-      title: 'Auri Gabriel - Salesforce Commerce Cloud Developer',
+      title: 'Auri Gabriel - Salesforce Commerce Cloud B2C Developer',
       description:
-        'Salesforce Commerce Cloud Developer specialized in React, AWS and e-commerce. Experience with SFRA, JavaScript and modern technologies. Professional portfolio.',
+        'Salesforce Commerce Cloud B2C Developer, React and JavaScript developer. Experience with SFRA and modern technologies. Professional portfolio.',
       keywords:
-        'Auri Gabriel, Salesforce Developer, Commerce Cloud, React, AWS, SFRA, JavaScript, Front-End, E-commerce, Brazil, Compass.uol',
-      ogTitle: 'Auri Gabriel - Salesforce Commerce Cloud Developer',
+        'Auri Gabriel, Salesforce Developer, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brazil, Compass.uol',
+      ogTitle: 'Auri Gabriel - Salesforce Commerce Cloud B2C Developer',
       ogDescription:
-        'Developer specialized in Salesforce Commerce Cloud, React and AWS. Check out my portfolio and professional experience.',
-      twitterTitle: 'Auri Gabriel - Salesforce Commerce Cloud Developer',
+        'Salesforce Commerce Cloud B2C Developer, React and JavaScript developer. Check out my portfolio and professional experience.',
+      twitterTitle: 'Auri Gabriel - Salesforce Commerce Cloud B2C Developer',
       twitterDescription:
-        'Salesforce Commerce Cloud Developer | React | AWS | E-commerce',
+        'Salesforce Commerce Cloud B2C | React | JavaScript | E-commerce',
     },
   };
 
@@ -105,7 +106,6 @@ const SEOComponent = () => {
             'Salesforce Commerce Cloud',
             'React',
             'JavaScript',
-            'AWS',
             'SFRA',
             'Front-End Development',
             'E-commerce',
