@@ -79,7 +79,7 @@ const Skills = () => {
           .length > 6 && (
           <div className='flex justify-center'>
             <Button
-              className='text-gray-700 rounded-none bg-white'
+              className='text-gray-700 rounded-full bg-white'
               onClick={handleShowAll}
               text={showAll ? t('skills.showLess') : t('skills.showMore')}
             />
