@@ -1,7 +1,13 @@
 {
     "hero": {
-        "greeting": "Olá, eu sou o Auri Gabriel!",
-        "description": "Sou desenvolvedor Salesforce Commerce Cloud na Compass.uol"
+        "greeting": "Olá, eu sou o Auri Gabriel",
+        "tagline": "Desenvolvedor Salesforce Commerce Cloud B2C",
+        "description": "Criando experiências de e-commerce na Compass.uol",
+        "cta": {
+            "linkedin": "Conectar no LinkedIn",
+            "github": "Ver Meu Trabalho",
+            "scrollDown": "Explorar Minhas Habilidades"
+        }
     },
     "skills": {
         "title": "As tecnologias que uso",
