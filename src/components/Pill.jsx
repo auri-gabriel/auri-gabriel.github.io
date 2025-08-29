@@ -8,12 +8,13 @@ const Pill = (props) => {
       my-1
       p-2
       px-4
-      border 
+      border
+      rounded-full 
       hover:drop-shadow-md
       ${
         props.active
           ? 'bg-primary-blue text-white border-transparent'
-          : 'bg-transparent border border-primary-blue'
+          : 'bg-transparent border text-black border-black'
       }
       `}
       onClick={props.onClick}
