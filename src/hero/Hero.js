@@ -188,6 +188,7 @@ const Hero = () => {
                 hover:bg-gray-100 transition-colors duration-200
                 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5
                 min-w-[200px] justify-center
+                w-full sm:w-auto
               '
             >
               <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 20 20'>
@@ -209,6 +210,7 @@ const Hero = () => {
                 bg-transparent text-white font-semibold rounded-lg border-2 border-white border-opacity-30
                 hover:bg-white hover:bg-opacity-10 hover:border-opacity-50 transition-all duration-200
                 min-w-[200px] justify-center
+                w-full sm:w-auto
               '
             >
               <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 20 20'>
