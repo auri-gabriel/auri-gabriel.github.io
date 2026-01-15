@@ -15,7 +15,7 @@ const SEOComponent = () => {
       description:
         'Desenvolvedor Salesforce Commerce Cloud B2C, React e JavaScript. Experiência em SFRA e tecnologias modernas. Portfolio profissional.',
       keywords:
-        'Auri Gabriel, Desenvolvedor Salesforce, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brasil, Compass.uol',
+        'Auri Gabriel, Castro de Melo, Desenvolvedor Salesforce, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brasil, Compass.uol',
       ogTitle: 'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud B2C',
       ogDescription:
         'Desenvolvedor Salesforce Commerce Cloud B2C, React e JavaScript. Veja meu portfolio e experiência profissional.',
@@ -29,7 +29,7 @@ const SEOComponent = () => {
       description:
         'Salesforce Commerce Cloud B2C Developer, React and JavaScript developer. Experience with SFRA and modern technologies. Professional portfolio.',
       keywords:
-        'Auri Gabriel, Salesforce Developer, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brazil, Compass.uol',
+        'Auri Gabriel, Castro de Melo, Salesforce Developer, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brazil, Compass.uol',
       ogTitle: 'Auri Gabriel - Salesforce Commerce Cloud B2C Developer',
       ogDescription:
         'Salesforce Commerce Cloud B2C Developer, React and JavaScript developer. Check out my portfolio and professional experience.',
@@ -88,7 +88,7 @@ const SEOComponent = () => {
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Person',
-          name: 'Auri Gabriel',
+          name: 'Auri Gabriel Castro de Melo',
           jobTitle: isPortuguese
             ? 'Desenvolvedor Salesforce Commerce Cloud'
             : 'Salesforce Commerce Cloud Developer',
