@@ -57,5 +57,73 @@
     },
     "common": {
         "scrollToTop": "Voltar ao topo"
+    },
+    "projects": {
+        "title": "Projetos",
+        "items": [
+            {
+                "title": "Ferramenta de Framework Semiótico",
+                "description": "Uma ferramenta web participativa que implementa o Framework da Escada Semiótica proposto por Ronald Stamper, integrado com as Camadas de Engenharia de Software de Pressman. Esta ferramenta facilita o desenvolvimento de software educacional através de modelagem semiótica estruturada e abordagens de design participativo.",
+                "technologies": [
+                    "React",
+                    "Vite",
+                    "Bootstrap",
+                    "SASS",
+                    "html2pdf.js"
+                ],
+                "githubUrl": "https://github.com/auri-gabriel/semiotic-framework-tool",
+                "liveUrl": "https://auri-gabriel.github.io/semiotic-framework-tool/",
+                "isLearningProject": false
+            },
+            {
+                "title": "FitMe - App de Delivery de Comida",
+                "description": "Uma aplicação full-stack de entrega de comida com navegação de restaurantes, gerenciamento de cardápio e autenticação de usuários. Este projeto foi desenvolvido como exercício de aprendizado para praticar React, TypeScript e integração de APIs.",
+                "technologies": [
+                    "React",
+                    "TypeScript",
+                    "Bootstrap",
+                    "Styled Components",
+                    "Vite"
+                ],
+                "githubUrl": "https://github.com/auri-gabriel/fitme",
+                "isLearningProject": true
+            },
+            {
+                "title": "FitMe Backend",
+                "description": "Serviço backend GraphQL para a aplicação de delivery FitMe, gerenciando restaurantes, pratos e categorias. Construído como projeto de aprendizado para explorar Spring Boot, GraphQL e JPA.",
+                "technologies": [
+                    "Java",
+                    "Spring Boot",
+                    "GraphQL",
+                    "JPA",
+                    "PostgreSQL"
+                ],
+                "githubUrl": "https://github.com/auri-gabriel/com.fitme.backend",
+                "isLearningProject": true
+            },
+            {
+                "title": "Folio Agency",
+                "description": "Um site de portfólio responsivo para uma agência criativa, mostrando serviços, trabalhos e vagas de emprego. Criado como projeto de aprendizado para praticar técnicas de layout HTML e CSS.",
+                "technologies": [
+                    "HTML",
+                    "CSS"
+                ],
+                "githubUrl": "https://github.com/auri-gabriel/folio-agency",
+                "liveUrl": "https://auri-gabriel.github.io/folio-agency/",
+                "isLearningProject": true
+            },
+            {
+                "title": "Task Tracker API",
+                "description": "Uma API RESTful para gerenciar listas de tarefas e tarefas individuais com operações CRUD. Desenvolvido como projeto de aprendizado para praticar Spring Boot, design de API REST e gerenciamento de banco de dados.",
+                "technologies": [
+                    "Java",
+                    "Spring Boot",
+                    "PostgreSQL",
+                    "Docker"
+                ],
+                "githubUrl": "https://github.com/auri-gabriel/tasks",
+                "isLearningProject": true
+            }
+        ]
     }
 }

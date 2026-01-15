@@ -7,6 +7,7 @@ import Footer from '../footer/Footer';
 import Container from '../layout/Container';
 import ScrollToTopButton from '../components/ScrollToTopButton';
 import Experience from '../experience/Experience';
+import Projects from '../projects/Projects';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import SEOComponent from '../components/SEOComponent';
 
@@ -57,6 +58,9 @@ const LanguageRouter = () => {
         </Container>
         <Container>
           <Experience />
+        </Container>
+        <Container>
+          <Projects />
         </Container>
       </main>
       <Container>
