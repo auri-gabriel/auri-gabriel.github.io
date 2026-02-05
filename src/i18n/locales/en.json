@@ -24,9 +24,9 @@
                 "summary": "Salesforce Commerce Cloud Developer at Compass.uol. Working with Salesforce B2C to create e-commerce platforms.",
                 "clients": [
                     {
-                        "name": "Sem Parar",
+                        "name": "Enterprise Mobility & Services Client",
                         "duration": "May 2024 - Present",
-                        "summary": "Contributed to a seamless migration of e-commerce functionalities from a legacy VTEX platform to Salesforce Commerce Cloud B2C. Built and deployed partnership landing pages, connected partnership systems by developing API connections to validate client cards with external partners, and developed the new billing payment page with API integration and automated PDF document generation. Created reusable and dynamic components for the SFCC Page Designer, empowering non-technical users to efficiently build and customize storefront experiences."
+                        "summary": "Contributed to a seamless migration of e-commerce functionalities from a legacy VTEX platform to Salesforce Commerce Cloud B2C for a large mobility and services provider. Built and deployed partnership landing pages, connected partnership systems by developing API connections to validate client cards with external partners, and developed the new billing payment page with API integration and automated PDF document generation. Created reusable and dynamic components for the SFCC Page Designer, empowering non-technical users to efficiently build and customize storefront experiences."
                     }
                 ]
             },
