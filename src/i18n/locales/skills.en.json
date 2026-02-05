@@ -1,190 +1,252 @@
 {
   "skills": [
     {
+      "id": "rust",
       "name": "Rust Programming Language",
       "description": "A systems programming language that runs blazingly fast, prevents segfaults, and guarantees thread safety.",
       "icon": "🦀",
-      "category": "Programming Language"
+      "category": "Programming Language",
+      "categoryKey": "programming-language"
     },
     {
+      "id": "linux",
       "name": "Linux",
       "description": "An open-source kernel that is widely used for servers, desktops, and IoT devices.",
       "icon": "🐧",
-      "category": "Operating System"
+      "category": "Operating System",
+      "categoryKey": "operating-system"
     },
     {
+      "id": "fedora",
       "name": "Fedora",
       "description": "A Linux distribution developed by the community-supported Fedora Project and sponsored by Red Hat.",
       "icon": "🎩",
-      "category": "Operating System"
+      "category": "Operating System",
+      "categoryKey": "operating-system"
     },
     {
+      "id": "machine-learning",
       "name": "Machine Learning",
       "description": "A field of artificial intelligence that focuses on the development of algorithms that can learn patterns from data.",
       "icon": "🧠",
-      "category": "Artificial Intelligence"
+      "category": "Artificial Intelligence",
+      "categoryKey": "artificial-intelligence"
     },
     {
+      "id": "javascript",
       "name": "JavaScript",
       "description": "A high-level, dynamic, and interpreted programming language used primarily for creating interactive web pages and web applications.",
       "icon": "💻",
-      "category": "Programming Language"
+      "category": "Programming Language",
+      "categoryKey": "programming-language"
     },
     {
+      "id": "docker",
       "name": "Docker",
       "description": "A platform for developers and sysadmins to develop, deploy, and run applications with containers.",
       "icon": "🐳",
-      "category": "Platform"
+      "category": "Platform",
+      "categoryKey": "platform"
     },
     {
+      "id": "podman",
       "name": "Podman",
       "description": "A daemonless container engine for developing, managing, and running Open Container Initiative (OCI) containers and container images on your Linux System.",
       "icon": "🦭",
-      "category": "Platform"
+      "category": "Platform",
+      "categoryKey": "platform"
     },
     {
+      "id": "bash",
       "name": "Bash Scripting",
       "description": "The act of writing scripts using the Bash shell language, which is commonly used in Linux and Unix systems for automating tasks and performing command-line operations.",
       "icon": "🐚",
-      "category": "Scripting Language"
+      "category": "Scripting Language",
+      "categoryKey": "scripting-language"
     },
     {
+      "id": "awk",
       "name": "AWK",
       "description": "A versatile programming language designed for pattern scanning and processing language.",
       "icon": "🦉",
-      "category": "Programming Language"
+      "category": "Programming Language",
+      "categoryKey": "programming-language"
     },
     {
+      "id": "java",
       "name": "Java",
       "description": "A high-level, object-oriented programming language used for building scalable and secure applications, especially in the enterprise environment.",
       "icon": "☕",
-      "category": "Programming Language"
+      "category": "Programming Language",
+      "categoryKey": "programming-language"
     },
     {
+      "id": "python",
       "name": "Python",
       "description": "A high-level programming language used for a wide range of tasks such as web development, data analysis, artificial intelligence, and more.",
       "icon": "🐍",
-      "category": "Programming Language"
+      "category": "Programming Language",
+      "categoryKey": "programming-language"
     },
     {
+      "id": "react",
       "name": "React.js",
       "description": "A JavaScript library for building user interfaces using a component-based approach.",
       "icon": "💻",
-      "category": "JavaScript Library"
+      "category": "JavaScript Library",
+      "categoryKey": "javascript-library"
     },
     {
+      "id": "laravel",
       "name": "Laravel",
       "description": "A PHP-based framework for building web applications following the MVC pattern.",
       "icon": "🚀",
-      "category": "Framework"
+      "category": "Framework",
+      "categoryKey": "framework"
     },
     {
+      "id": "php",
       "name": "PHP",
       "description": "A popular server-side scripting language used for building dynamic web pages and web applications.",
       "icon": "🐘",
-      "category": "Programming Language"
+      "category": "Programming Language",
+      "categoryKey": "programming-language"
     },
     {
+      "id": "mysql",
       "name": "MySQL",
       "description": "An open-source relational database management system that uses SQL for querying and managing data.",
       "icon": "🗄️",
-      "category": "Database"
+      "category": "Database",
+      "categoryKey": "database"
     },
     {
+      "id": "git",
       "name": "Git",
       "description": "A distributed version control system used for tracking changes in source code during software development.",
       "icon": "🌳",
-      "category": "Version Control"
+      "category": "Version Control",
+      "categoryKey": "version-control"
     },
     {
+      "id": "postgresql",
       "name": "PostgreSQL",
       "description": "An open-source object-relational database system known for its reliability, robustness, and performance.",
       "icon": "🐘",
-      "category": "Database"
+      "category": "Database",
+      "categoryKey": "database"
     },
     {
+      "id": "sqlite",
       "name": "SQLite",
       "description": "A C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine.",
       "icon": "💾",
-      "category": "Database"
+      "category": "Database",
+      "categoryKey": "database"
     },
     {
+      "id": "neovim",
       "name": "NeoVim",
       "description": "A highly configurable, improved version of the Vim text editor.",
       "icon": "📝",
-      "category": "Text Editor"
+      "category": "Text Editor",
+      "categoryKey": "text-editor"
     },
     {
+      "id": "vscode",
       "name": "VS Code",
       "description": "A lightweight but powerful source code editor developed by Microsoft, supporting many programming languages and extensions.",
       "icon": "🧩",
-      "category": "Text Editor"
+      "category": "Text Editor",
+      "categoryKey": "text-editor"
     },
     {
+      "id": "intellij",
       "name": "IntelliJ IDEA",
       "description": "An IDE developed by JetBrains for developing with Java and other JVM languages, known for smart code completion and deep integration with frameworks.",
       "icon": "🧠",
-      "category": "IDE"
+      "category": "IDE",
+      "categoryKey": "ide"
     },
     {
+      "id": "spring-boot",
       "name": "Spring Boot",
       "description": "A framework that simplifies the development of Java-based enterprise applications by providing production-ready defaults.",
       "icon": "🌱",
-      "category": "Framework"
+      "category": "Framework",
+      "categoryKey": "framework"
     },
     {
+      "id": "nodejs",
       "name": "Node.js",
       "description": "A JavaScript runtime built on Chrome's V8 engine, used for building scalable network applications.",
       "icon": "🟢",
-      "category": "Runtime Environment"
+      "category": "Runtime Environment",
+      "categoryKey": "runtime-environment"
     },
     {
+      "id": "nestjs",
       "name": "Nest.js",
       "description": "A progressive Node.js framework for building efficient and scalable server-side applications using TypeScript.",
       "icon": "🛡️",
-      "category": "Framework"
+      "category": "Framework",
+      "categoryKey": "framework"
     },
     {
+      "id": "mongodb",
       "name": "MongoDB",
       "description": "A document-oriented NoSQL database used for high volume data storage, known for its flexibility and scalability.",
       "icon": "🍃",
-      "category": "Database"
+      "category": "Database",
+      "categoryKey": "database"
     },
     {
+      "id": "sfdc-b2c",
       "name": "Salesforce Commerce Cloud B2C",
       "description": "A cloud-based e-commerce platform that enables brands to deliver personalized shopping experiences across channels.",
       "icon": "🛍️",
-      "category": "E-commerce Platform"
+      "category": "E-commerce Platform",
+      "categoryKey": "ecommerce-platform"
     },
     {
+      "id": "sfra",
       "name": "SFRA",
       "description": "Salesforce Reference Architecture is a customizable front-end framework used with Salesforce Commerce Cloud to accelerate storefront development.",
       "icon": "📐",
-      "category": "Framework"
+      "category": "Framework",
+      "categoryKey": "framework"
     },
     {
+      "id": "sfcc",
       "name": "SFCC",
       "description": "Salesforce Commerce Cloud is a cloud-based platform for unifying digital commerce, order management, and AI-driven personalization.",
       "icon": "☁️",
-      "category": "E-commerce Platform"
+      "category": "E-commerce Platform",
+      "categoryKey": "ecommerce-platform"
     },
     {
+      "id": "typescript",
       "name": "TypeScript",
       "description": "A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
       "icon": "📘",
-      "category": "Programming Language"
+      "category": "Programming Language",
+      "categoryKey": "programming-language"
     },
     {
+      "id": "dart",
       "name": "Dart",
       "description": "A client-optimized programming language for fast apps on any platform, developed by Google and used for building mobile, desktop, server, and web applications.",
       "icon": "🎯",
-      "category": "Programming Language"
+      "category": "Programming Language",
+      "categoryKey": "programming-language"
     },
     {
+      "id": "flutter",
       "name": "Flutter",
       "description": "An open-source UI software development toolkit created by Google for building natively compiled applications for mobile, web, and desktop from a single codebase.",
       "icon": "🔵",
-      "category": "Framework"
+      "category": "Framework",
+      "categoryKey": "framework"
     }
   ]
 }

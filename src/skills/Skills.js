@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from '../components/Button';
 import Pill from '../components/Pill';
@@ -12,13 +12,34 @@ const Skills = () => {
   const skillsData = i18n.language === 'pt' ? skillsPt : skillsEn;
   const skills = skillsData['skills'];
 
-  const uniqueCategories = Array.from(
-    new Set(skills.map((skill) => skill.category))
+  const uniqueCategoryKeys = useMemo(
+    () => Array.from(new Set(skills.map((skill) => skill.categoryKey))),
+    [skills],
   );
+
+  const categoryLabels = useMemo(() => {
+    const map = new Map();
+    skills.forEach((skill) => {
+      if (!map.has(skill.categoryKey)) {
+        map.set(skill.categoryKey, skill.category);
+      }
+    });
+    return map;
+  }, [skills]);
 
   const [showAll, setShowAll] = useState(false);
   const [selectedCategories, setSelectedCategories] =
-    useState(uniqueCategories);
+    useState(uniqueCategoryKeys);
+
+  useEffect(() => {
+    setSelectedCategories((prevSelectedCategories) => {
+      const filtered = prevSelectedCategories.filter((categoryKey) =>
+        uniqueCategoryKeys.includes(categoryKey),
+      );
+
+      return filtered.length > 0 ? filtered : uniqueCategoryKeys;
+    });
+  }, [uniqueCategoryKeys]);
 
   const handleShowAll = () => {
     setShowAll(!showAll);
@@ -31,7 +52,7 @@ const Skills = () => {
         prevSelectedCategories.length === 1 &&
         prevSelectedCategories.includes(category)
       ) {
-        return uniqueCategories;
+        return uniqueCategoryKeys;
       } else {
         // Otherwise, select only the clicked category
         return [category];
@@ -60,23 +81,24 @@ const Skills = () => {
       </div>
       <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-12 lg:max-w-4xl'>
         <div className='flex flex-wrap my-6'>
-          {uniqueCategories.map((category) => (
+          {uniqueCategoryKeys.map((categoryKey) => (
             <Pill
-              key={category}
-              active={selectedCategories.includes(category)}
-              onClick={() => toggleCategory(category)}
-              text={category}
+              key={categoryKey}
+              active={selectedCategories.includes(categoryKey)}
+              onClick={() => toggleCategory(categoryKey)}
+              text={categoryLabels.get(categoryKey) || categoryKey}
             />
           ))}
         </div>
         <dl className='my-12 grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16 pb-4'>
           {skills
-            .filter((skill) => selectedCategories.includes(skill.category))
+            .filter((skill) => selectedCategories.includes(skill.categoryKey))
             .slice(0, showAll ? skills.length : 6)
             .map((skill) => skillCard(skill))}
         </dl>
-        {skills.filter((skill) => selectedCategories.includes(skill.category))
-          .length > 6 && (
+        {skills.filter((skill) =>
+          selectedCategories.includes(skill.categoryKey),
+        ).length > 6 && (
           <div className='flex justify-center'>
             <Button
               className='text-gray-700 rounded-full bg-white'
@@ -91,7 +113,7 @@ const Skills = () => {
 
   function skillCard(skill) {
     return (
-      <div key={skill.name} className='relative pl-16'>
+      <div key={skill.id} className='relative pl-16'>
         <dt className='text-base font-semibold leading-7 text-gray-900'>
           <div
             className='absolute 
