@@ -76,6 +76,32 @@
                 "isLearningProject": false
             },
             {
+                "title": "Evaluation Board",
+                "description": "Simple board for evaluations.",
+                "technologies": [
+                    "TypeScript",
+                    "React",
+                    "Vite",
+                    "Bootstrap"
+                ],
+                "githubUrl": "https://github.com/auri-gabriel/quadro-de-avaliacao",
+                "liveUrl": "https://auri-gabriel.github.io/quadro-de-avaliacao/",
+                "isLearningProject": false
+            },
+            {
+                "title": "Thoth Legacy Revived",
+                "description": "Legacy application modernization.",
+                "technologies": [
+                    "PHP",
+                    "Code Igniter 3",
+                    "Twig Templates",
+                    "Bootstrap",
+                    "Docker"
+                ],
+                "githubUrl": "https://github.com/auri-gabriel/thoth-legacy-revived",
+                "isLearningProject": false
+            },
+            {
                 "title": "FitMe - Food Delivery App",
                 "description": "A full-stack food delivery application featuring restaurant browsing, menu management, and user authentication. This project was developed as a learning exercise to practice React, TypeScript, and API integration skills.",
                 "technologies": [
