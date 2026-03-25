@@ -65,14 +65,6 @@
             "categoryKey": "scripting-language"
         },
         {
-            "id": "awk",
-            "name": "AWK",
-            "description": "Uma linguagem de programação versátil projetada para escaneamento de padrões e processamento de linguagem.",
-            "icon": "🦉",
-            "category": "Linguagem de Programação",
-            "categoryKey": "programming-language"
-        },
-        {
             "id": "java",
             "name": "Java",
             "description": "Uma linguagem de programação de alto nível orientada a objetos usada para construir aplicações escaláveis e seguras, especialmente no ambiente empresarial.",
