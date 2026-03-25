@@ -99,7 +99,7 @@
                     "Docker"
                 ],
                 "githubUrl": "https://github.com/auri-gabriel/thoth-legacy-revived",
-                "isLearningProject": true
+                "isLearningProject": false
             },
             {
                 "title": "FitMe - App de Delivery de Comida",
