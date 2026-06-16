@@ -25,10 +25,21 @@ function generateNonOverlappingEmojis(emojis, count) {
       EMOJI_MIN_SIZE + Math.random() * (EMOJI_MAX_SIZE - EMOJI_MIN_SIZE);
     const top = Math.random() * (100 - size / 2);
     const left = Math.random() * (100 - size / 2);
-    const rotate = Math.random() * 90;
-    const opacity = 0.12 + Math.random() * 0.18;
+    const rotate = Math.random() * 360;
+    const opacity = 0.08 + Math.random() * 0.14;
+    const depth = Math.random() * 0.3;
+    const floatDelay = Math.random() * 5;
     const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-    const candidate = { top, left, size, rotate, opacity, emoji };
+    const candidate = {
+      top,
+      left,
+      size,
+      rotate,
+      opacity,
+      emoji,
+      depth,
+      floatDelay,
+    };
 
     // Check overlap
     const pxTop = (top / 100) * window.innerHeight;
@@ -56,9 +67,9 @@ function generateNonOverlappingEmojis(emojis, count) {
 }
 
 const Hero = () => {
-  // eslint-disable-next-line
   const [hash, setHash] = useState('');
   const [backgroundEmojis, setBackgroundEmojis] = useState([]);
+  const [scrollY, setScrollY] = useState(0);
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -79,6 +90,14 @@ const Hero = () => {
     // eslint-disable-next-line
   }, [i18n.language]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleButtonClick = (event) => {
     event.preventDefault();
     window.location.hash = '#skills';
@@ -95,13 +114,42 @@ const Hero = () => {
       flex
       flex-col
       justify-between
-      bg-primary-blue
       relative
       overflow-hidden
       '
       style={{ zIndex: 1 }}
     >
-      {/* Emoji background */}
+      {/* Animated gradient background */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: `linear-gradient(135deg, 
+            #21409a 0%, 
+            #1a2f73 25%,
+            #0f1f47 50%,
+            #1a2f73 75%, 
+            #21409a 100%)`,
+          backgroundSize: '400% 400%',
+          animation: 'gradientShift 15s ease infinite',
+          zIndex: 0,
+        }}
+      />
+
+      {/* Animated light rays effect */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: `radial-gradient(circle at 20% 50%, rgba(255, 222, 23, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(190, 30, 45, 0.02) 0%, transparent 50%)`,
+          animation: 'lightShift 8s ease-in-out infinite',
+          zIndex: 1,
+          pointerEvents: 'none',
+        }}
+      />
+
+      {/* Emoji background with parallax */}
       <div
         aria-hidden='true'
         style={{
@@ -109,7 +157,7 @@ const Hero = () => {
           inset: 0,
           width: '100%',
           height: '100%',
-          zIndex: 0,
+          zIndex: 2,
           pointerEvents: 'none',
         }}
       >
@@ -118,7 +166,7 @@ const Hero = () => {
             key={i}
             style={{
               position: 'absolute',
-              top: `${e.top}%`,
+              top: `${e.top + scrollY * e.depth * 0.05}%`,
               left: `${e.left}%`,
               fontSize: `${e.size}px`,
               opacity: e.opacity,
@@ -126,79 +174,148 @@ const Hero = () => {
               transform: `rotate(${e.rotate}deg)`,
               userSelect: 'none',
               zIndex: 0,
+              transition: 'top 0.1s ease-out',
+              animation: `float ${4 + e.floatDelay}s ease-in-out infinite`,
+              animationDelay: `${e.floatDelay}s`,
             }}
           >
             {e.emoji}
           </span>
         ))}
-        {/* Dark overlay for better contrast */}
+
+        {/* Premium dark overlay with gradient */}
         <div
           style={{
             position: 'absolute',
             inset: 0,
             width: '100%',
             height: '100%',
-            background: 'rgba(0,0,0,0.45)',
-            zIndex: 1,
+            background: `linear-gradient(180deg, 
+              rgba(15, 31, 71, 0.4) 0%, 
+              rgba(15, 31, 71, 0.55) 50%, 
+              rgba(15, 31, 71, 0.7) 100%)`,
+            zIndex: 3,
             pointerEvents: 'none',
           }}
         />
       </div>
+
+      {/* Content container */}
       <header
         className='flex-grow flex flex-col justify-center px-6 sm:px-8'
-        style={{ position: 'relative', zIndex: 1 }}
+        style={{ position: 'relative', zIndex: 10 }}
       >
-        {/* Main content container */}
-        <div className='max-w-4xl mx-auto'>
-          {/* Greeting */}
-          <h1 className='text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4'>
+        <div className='max-w-4xl mx-auto w-full'>
+          {/* Greeting with stagger animation */}
+          <h1
+            className='text-3xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-white mb-4'
+            style={{
+              animation: 'fadeInUp 0.8s ease-out forwards',
+              opacity: 0,
+            }}
+          >
             {t('hero.greeting')}
           </h1>
 
-          {/* Rocket emoji */}
+          {/* Animated rocket with glow */}
           <div
-            className='text-6xl lg:text-7xl py-4 lg:py-6 my-5'
+            className='text-6xl lg:text-8xl py-4 lg:py-8 my-6'
             role='img'
             aria-label='Rocket emoji'
+            style={{
+              animation:
+                'fadeInUp 0.8s ease-out 0.2s forwards, rocketFloat 3s ease-in-out infinite',
+              opacity: 0,
+              filter: 'drop-shadow(0 0 20px rgba(255, 222, 23, 0.3))',
+            }}
           >
             🚀
           </div>
 
-          {/* Tagline */}
-          <div className='mb-6'>
-            <span className='inline-block bg-white bg-opacity-15 backdrop-blur-sm border border-white border-opacity-20 rounded-full px-6 py-2 text-sm font-medium text-white'>
+          {/* Premium tagline with glassmorphism */}
+          <div
+            className='mb-8'
+            style={{
+              animation: 'fadeInUp 0.8s ease-out 0.4s forwards',
+              opacity: 0,
+            }}
+          >
+            <span
+              className='inline-block backdrop-blur-xl border border-white text-sm font-medium text-white px-8 py-3 rounded-full shadow-2xl'
+              style={{
+                background: 'rgba(255, 255, 255, 0.08)',
+                borderColor: 'rgba(255, 255, 255, 0.25)',
+                boxShadow: '0 8px 32px rgba(15, 31, 71, 0.3)',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.35)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)';
+              }}
+            >
               {t('hero.tagline')}
             </span>
           </div>
 
           {/* Description */}
-          <p className='text-lg sm:text-xl leading-relaxed text-gray-200 mb-8 max-w-2xl mx-auto'>
+          <p
+            className='text-lg sm:text-xl leading-relaxed text-gray-100 mb-10 max-w-3xl mx-auto font-light'
+            style={{
+              animation: 'fadeInUp 0.8s ease-out 0.6s forwards',
+              opacity: 0,
+            }}
+          >
             {t('hero.description')}
           </p>
 
-          {/* CTA Buttons */}
-          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
+          {/* CTA Buttons with enhanced effects */}
+          <div
+            className='flex flex-col sm:flex-row gap-5 justify-center items-center mb-8'
+            style={{
+              animation: 'fadeInUp 0.8s ease-out 0.8s forwards',
+              opacity: 0,
+            }}
+          >
             <a
               href='https://linkedin.com/in/auri-gabriel'
               target='_blank'
               rel='noopener noreferrer'
               className='
-                inline-flex items-center gap-2 px-6 py-3 
-                bg-white text-primary-blue font-semibold rounded-lg
-                hover:bg-gray-100 transition-colors duration-200
-                shadow-lg hover:shadow-xl transform hover:-translate-y-0.5
-                min-w-[200px] justify-center
+                inline-flex items-center gap-2 px-8 py-4
+                bg-white text-primary-blue font-semibold rounded-xl
+                hover:bg-opacity-95 transition-all duration-300
+                shadow-xl hover:shadow-2xl transform hover:scale-105
+                min-w-[220px] justify-center
                 w-full sm:w-auto
+                backdrop-blur-md
+                relative overflow-hidden group
               '
+              style={{
+                background: 'linear-gradient(135deg, #fff 0%, #f5f5f5 100%)',
+              }}
             >
-              <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 20 20'>
-                <path
-                  fillRule='evenodd'
-                  d='M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z'
-                  clipRule='evenodd'
-                />
-              </svg>
-              {t('hero.cta.linkedin')}
+              <span className='relative z-10 flex items-center gap-2'>
+                <svg
+                  className='w-5 h-5'
+                  fill='currentColor'
+                  viewBox='0 0 20 20'
+                >
+                  <path
+                    fillRule='evenodd'
+                    d='M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z'
+                    clipRule='evenodd'
+                  />
+                </svg>
+                {t('hero.cta.linkedin')}
+              </span>
+              <div
+                className='absolute inset-0 bg-gradient-to-r from-primary-yellow to-primary-orange opacity-0 group-hover:opacity-10 transition-opacity duration-300'
+                style={{ zIndex: 0 }}
+              />
             </a>
 
             <a
@@ -206,12 +323,25 @@ const Hero = () => {
               target='_blank'
               rel='noopener noreferrer'
               className='
-                inline-flex items-center gap-2 px-6 py-3 
-                bg-transparent text-white font-semibold rounded-lg border-2 border-white border-opacity-30
-                hover:bg-white hover:bg-opacity-10 hover:border-opacity-50 transition-all duration-200
-                min-w-[200px] justify-center
+                inline-flex items-center gap-2 px-8 py-4
+                font-semibold rounded-xl border-2 border-white border-opacity-40
+                hover:border-opacity-70 transition-all duration-300
+                min-w-[220px] justify-center
                 w-full sm:w-auto
+                hover:scale-105 transform
+                text-white backdrop-blur-md
+                group
               '
+              style={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+              }}
             >
               <svg className='w-5 h-5' fill='currentColor' viewBox='0 0 20 20'>
                 <path
@@ -226,11 +356,12 @@ const Hero = () => {
         </div>
       </header>
 
+      {/* Scroll indicator with enhanced animation */}
       <div
         className='pb-16 sm:pb-24 lg:pb-36 flex-none'
-        style={{ position: 'relative', zIndex: 1 }}
+        style={{ position: 'relative', zIndex: 10 }}
       >
-        <div className='flex items-center justify-center text-white'>
+        <div className='flex items-center justify-center text-white group cursor-pointer'>
           <a
             href='/#skills'
             onClick={handleButtonClick}
@@ -279,6 +410,72 @@ const Hero = () => {
           </a>
         </div>
       </div>
+
+      {/* CSS Animations */}
+      <style jsx>{`
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+
+        @keyframes lightShift {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.6;
+          }
+        }
+
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(5deg);
+          }
+        }
+
+        @keyframes rocketFloat {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes bounce {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+      `}</style>
     </section>
   );
 };
