@@ -30,6 +30,11 @@ const Skills = () => {
   const [showAll, setShowAll] = useState(false);
   const [selectedCategories, setSelectedCategories] =
     useState(uniqueCategoryKeys);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     setSelectedCategories((prevSelectedCategories) => {
@@ -61,23 +66,11 @@ const Skills = () => {
   };
 
   return (
-    <section
-      id='skills'
-      className='
-        w-full
-        mx-auto
-        pt-16
-        '
-    >
+    <section id='skills' className='w-full mx-auto pt-16'>
       <div className='mx-auto max-w-2xl lg:text-center'>
         <h2 className='mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl'>
           {t('skills.title')}
         </h2>
-        {/* <p className='mt-6 text-lg leading-8 text-gray-600'>
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-            Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-            In mi viverra elit nunc.
-          </p> */}
       </div>
       <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-12 lg:max-w-4xl'>
         <div className='flex flex-wrap my-6'>
@@ -94,14 +87,14 @@ const Skills = () => {
           {skills
             .filter((skill) => selectedCategories.includes(skill.categoryKey))
             .slice(0, showAll ? skills.length : 6)
-            .map((skill) => skillCard(skill))}
+            .map((skill, index) => skillCard(skill, index))}
         </dl>
         {skills.filter((skill) =>
           selectedCategories.includes(skill.categoryKey),
         ).length > 6 && (
           <div className='flex justify-center'>
             <Button
-              className='text-gray-700 rounded-full bg-white'
+              className='text-gray-700 rounded-full bg-white transition-transform duration-200 ease-out hover:-translate-y-0.5 hover:drop-shadow-xl'
               onClick={handleShowAll}
               text={showAll ? t('skills.showLess') : t('skills.showMore')}
             />
@@ -111,23 +104,19 @@ const Skills = () => {
     </section>
   );
 
-  function skillCard(skill) {
+  function skillCard(skill, index) {
     return (
-      <div key={skill.id} className='relative pl-16'>
+      <div
+        key={skill.id}
+        className={`group relative rounded-3xl bg-white/95 px-6 py-6 pl-20 transform transition-all duration-500 ease-out ${
+          mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'
+        } hover:-translate-y-1 hover:scale-[1.01] hover:shadow-2xl`}
+        style={{ transitionDelay: `${index * 80}ms` }}
+      >
         <dt className='text-base font-semibold leading-7 text-gray-900'>
-          <div
-            className='absolute 
-          top-0
-          left-0
-          flex
-          h-10
-          w-10
-          items-center
-          justify-center
-          rounded-lg'
-          >
+          <div className='absolute top-6 left-6 flex h-10 w-10 items-center justify-center rounded-lg'>
             <div
-              className='aspect-square p-3 rounded-full text-2xl border shadow-md'
+              className='aspect-square p-3 rounded-full text-2xl border border-gray-200 shadow-md transition-colors duration-300 group-hover:border-primary-blue group-hover:text-primary-blue'
               aria-hidden='true'
             >
               {skill.icon}
@@ -135,7 +124,7 @@ const Skills = () => {
           </div>
           {skill.name}
         </dt>
-        <dd className='mt-2 text-base leading-7 text-gray-600'>
+        <dd className='mt-4 text-base leading-7 text-gray-600'>
           {skill.description}
         </dd>
       </div>
