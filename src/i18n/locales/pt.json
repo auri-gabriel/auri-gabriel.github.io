@@ -1,7 +1,7 @@
 {
     "hero": {
         "greeting": "Olá, eu sou o Auri Gabriel",
-        "tagline": "Desenvolvedor Salesforce Commerce Cloud B2C",
+        "tagline": "Engenheiro de Software",
         "description": "Criando experiências de e-commerce na Compass.uol",
         "cta": {
             "linkedin": "Conectar no LinkedIn",
@@ -18,7 +18,7 @@
         "title": "Experiência Profissional",
         "jobs": [
             {
-                "title": "Desenvolvedor Salesforce Commerce Cloud B2C",
+                "title": "Engenheiro de Software",
                 "company": "Compass.uol",
                 "duration": "Maio 2024 - Presente",
                 "summary": "Desenvolvedor Salesforce Commerce Cloud na Compass.uol. Trabalhando com Salesforce B2C para criar plataformas de e-commerce.",

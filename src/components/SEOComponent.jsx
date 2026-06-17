@@ -11,31 +11,29 @@ const SEOComponent = () => {
 
   const seoData = {
     pt: {
-      title: 'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud B2C',
+      title: 'Auri Gabriel - Engenheiro de Software',
       description:
-        'Desenvolvedor Salesforce Commerce Cloud B2C, React e JavaScript. Experiência em SFRA e tecnologias modernas. Portfolio profissional.',
+        'Engenheiro de Software, React e JavaScript. Experiência em SFRA e tecnologias modernas. Portfolio profissional.',
       keywords:
         'Auri Gabriel, Castro de Melo, Desenvolvedor Salesforce, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brasil, Compass.uol',
-      ogTitle: 'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud B2C',
+      ogTitle: 'Auri Gabriel - Engenheiro de Software',
       ogDescription:
-        'Desenvolvedor Salesforce Commerce Cloud B2C, React e JavaScript. Veja meu portfolio e experiência profissional.',
-      twitterTitle:
-        'Auri Gabriel - Desenvolvedor Salesforce Commerce Cloud B2C',
+        'Engenheiro de Software, React e JavaScript. Veja meu portfolio e experiência profissional.',
+      twitterTitle: 'Auri Gabriel - Engenheiro de Software',
       twitterDescription:
         'Salesforce Commerce Cloud B2C | React | JavaScript | E-commerce',
     },
     en: {
-      title: 'Auri Gabriel - Salesforce Commerce Cloud B2C Developer',
+      title: 'Auri Gabriel - Software Engineer',
       description:
-        'Salesforce Commerce Cloud B2C Developer, React and JavaScript developer. Experience with SFRA and modern technologies. Professional portfolio.',
+        'Software Engineer, React and JavaScript developer. Experience with SFRA and modern technologies. Professional portfolio.',
       keywords:
-        'Auri Gabriel, Castro de Melo, Salesforce Developer, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brazil, Compass.uol',
-      ogTitle: 'Auri Gabriel - Salesforce Commerce Cloud B2C Developer',
+        'Auri Gabriel, Castro de Melo, Software Engineer, Commerce Cloud B2C, React, JavaScript, SFRA, Front-End, E-commerce, Brazil, Compass.uol',
+      ogTitle: 'Auri Gabriel - Software Engineer',
       ogDescription:
-        'Salesforce Commerce Cloud B2C Developer, React and JavaScript developer. Check out my portfolio and professional experience.',
-      twitterTitle: 'Auri Gabriel - Salesforce Commerce Cloud B2C Developer',
-      twitterDescription:
-        'Salesforce Commerce Cloud B2C | React | JavaScript | E-commerce',
+        'Software Engineer, React and JavaScript developer. Check out my portfolio and professional experience.',
+      twitterTitle: 'Auri Gabriel - Software Engineer',
+      twitterDescription: 'Software Engineer | React | JavaScript | E-commerce',
     },
   };
 
@@ -90,8 +88,8 @@ const SEOComponent = () => {
           '@type': 'Person',
           name: 'Auri Gabriel Castro de Melo',
           jobTitle: isPortuguese
-            ? 'Desenvolvedor Salesforce Commerce Cloud'
-            : 'Salesforce Commerce Cloud Developer',
+            ? 'Engenheiro de Software'
+            : 'Software Engineer',
           description: currentSEO.description,
           url: 'https://aurigabriel.com',
           sameAs: [
