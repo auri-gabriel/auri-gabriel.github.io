@@ -119,32 +119,86 @@ const Hero = () => {
       '
       style={{ zIndex: 1 }}
     >
-      {/* Animated gradient background */}
+      {/* Primary gradient background */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: `linear-gradient(135deg, 
-            #21409a 0%, 
-            #1a2f73 25%,
-            #0f1f47 50%,
-            #1a2f73 75%, 
-            #21409a 100%)`,
-          backgroundSize: '400% 400%',
-          animation: 'gradientShift 15s ease infinite',
+          background: `linear-gradient(180deg, 
+            #0f172a 0%, 
+            #1e3a8a 35%,
+            #1e3a8a 65%,
+            #0f172a 100%)`,
           zIndex: 0,
         }}
       />
 
-      {/* Animated light rays effect */}
+      {/* Animated mesh/blob elements */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: `radial-gradient(circle at 20% 50%, rgba(255, 222, 23, 0.03) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(190, 30, 45, 0.02) 0%, transparent 50%)`,
-          animation: 'lightShift 8s ease-in-out infinite',
           zIndex: 1,
+          pointerEvents: 'none',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Floating blob 1 */}
+        <div
+          style={{
+            position: 'absolute',
+            width: '500px',
+            height: '500px',
+            background:
+              'radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%)',
+            borderRadius: '45% 55% 60% 40% / 55% 45% 55% 45%',
+            top: '-100px',
+            left: '-50px',
+            animation: 'blobFloat1 20s ease-in-out infinite',
+            filter: 'blur(40px)',
+          }}
+        />
+
+        {/* Floating blob 2 */}
+        <div
+          style={{
+            position: 'absolute',
+            width: '400px',
+            height: '400px',
+            background:
+              'radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, transparent 70%)',
+            borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
+            bottom: '-50px',
+            right: '-100px',
+            animation: 'blobFloat2 25s ease-in-out infinite',
+            filter: 'blur(50px)',
+          }}
+        />
+
+        {/* Floating blob 3 */}
+        <div
+          style={{
+            position: 'absolute',
+            width: '350px',
+            height: '350px',
+            background:
+              'radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, transparent 70%)',
+            borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+            top: '40%',
+            right: '5%',
+            animation: 'blobFloat3 22s ease-in-out infinite',
+            filter: 'blur(45px)',
+          }}
+        />
+      </div>
+
+      {/* Subtle glow overlay */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: `radial-gradient(ellipse 1200px 600px at 50% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%)`,
+          zIndex: 2,
           pointerEvents: 'none',
         }}
       />
@@ -413,25 +467,63 @@ const Hero = () => {
 
       {/* CSS Animations */}
       <style jsx>{`
-        @keyframes gradientShift {
-          0% {
-            background-position: 0% 50%;
+        @keyframes blobFloat1 {
+          0%,
+          100% {
+            transform: translate(0px, 0px);
+            border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+          }
+          25% {
+            transform: translate(30px, -40px);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
           }
           50% {
-            background-position: 100% 50%;
+            transform: translate(-20px, 40px);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
           }
-          100% {
-            background-position: 0% 50%;
+          75% {
+            transform: translate(40px, 20px);
+            border-radius: 70% 30% 40% 60% / 40% 60% 30% 70%;
           }
         }
 
-        @keyframes lightShift {
+        @keyframes blobFloat2 {
           0%,
           100% {
-            opacity: 1;
+            transform: translate(0px, 0px);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+          }
+          25% {
+            transform: translate(-40px, 30px);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
           }
           50% {
-            opacity: 0.6;
+            transform: translate(40px, -30px);
+            border-radius: 70% 30% 40% 60% / 40% 60% 30% 70%;
+          }
+          75% {
+            transform: translate(-30px, -40px);
+            border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+          }
+        }
+
+        @keyframes blobFloat3 {
+          0%,
+          100% {
+            transform: translate(0px, 0px);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+          }
+          25% {
+            transform: translate(-50px, -20px);
+            border-radius: 70% 30% 40% 60% / 40% 60% 30% 70%;
+          }
+          50% {
+            transform: translate(30px, 50px);
+            border-radius: 45% 55% 60% 40% / 55% 45% 55% 45%;
+          }
+          75% {
+            transform: translate(50px, -30px);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
           }
         }
 
