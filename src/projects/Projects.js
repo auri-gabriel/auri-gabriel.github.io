@@ -20,7 +20,7 @@ const Projects = () => {
         <h2 className='mt-2 text-3xl font-bold tracking-tight text-black sm:text-4xl'>
           {t('projects.title')}
         </h2>
-        <div className='space-y-4 mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-12 lg:max-w-4xl py-2'>
+        <div className='mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 py-2 sm:mt-20 lg:mt-12 lg:max-w-4xl lg:grid-cols-2'>
           {projects.map((project, index) => (
             <ProjectItem key={index} {...project} />
           ))}

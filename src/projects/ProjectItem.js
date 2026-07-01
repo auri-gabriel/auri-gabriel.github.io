@@ -9,7 +9,7 @@ const ProjectItem = ({
   isLearningProject,
 }) => {
   return (
-    <div className='bg-white border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300'>
+    <div className='h-full bg-white border border-gray-200 p-6 shadow-sm hover:shadow-md transition-shadow duration-300'>
       <div className='flex items-center gap-2 mb-3'>
         <h3 className='text-xl font-semibold text-gray-900'>{title}</h3>
         {isLearningProject && (
